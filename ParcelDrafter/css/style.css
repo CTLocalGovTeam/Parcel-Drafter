@@ -12,6 +12,22 @@
     padding: 15px 0 0 0 !important;
 }
 
+/*Added class for map tooltip*/
+.esriCTMapTooltip
+{
+    width: 100px;
+    word-wrap: break-word;
+    border: 1px solid #7EABCD;
+    background-color: white;
+    padding: 5px;
+    font-size: 9pt;
+    z-index: 9999;
+    -o-border-radius: 4px;
+    -moz-border-radius: 4px;
+    -webkit-border-radius: 4px;
+    border-radius: 4px;
+}
+
 .jimu-widget-ParcelDrafter .esriCTWidgetErrorNode
 {
     padding: 0px 20px;
@@ -151,11 +167,23 @@
     background-image: url('../images/digitization.png');
 }
 
-.jimu-widget-ParcelDrafter .esriCTEnableButton
+.jimu-widget-ParcelDrafter .ecriCTUpdateRotationPointIcon
+{
+    background-image: url('../images/update-rotation.png');
+}
+
+.jimu-widget-ParcelDrafter .ecriCTLocationIcon.esriCTEnableButton
 {
     background-image: url('../images/digitization-selected.png');
     background-color: #8e8e8e;
 }
+
+.jimu-widget-ParcelDrafter .ecriCTUpdateRotationPointIcon.esriCTEnableButton
+{
+    background-image: url('../images/update-rotation-selected.png');
+    background-color: #8e8e8e;
+}
+
 
 .jimu-widget-ParcelDrafter .ecriCTZoomToIcon
 {
@@ -373,14 +401,15 @@
 
 .jimu-widget-ParcelDrafter .esriCTPlanInfoNode
 {
-    margin: 10px 20px;
+    margin: 0 4px;
     display: inline-block;
-    width: calc(100% - 40px);
+    width: calc(100% - 8px)
 }
 
 .jimu-widget-ParcelDrafter .esriCTPlanInfoButton
 {
     width: 80px;
+    margin-top: 10px;
 }
 
 /*------------------------- Styles for Parcel Tools Page Ends-----------------------*/

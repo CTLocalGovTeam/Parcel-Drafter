@@ -64,6 +64,7 @@ define([
       documentTypeControl: null, // to store document type dropdown
       planSettings: null, // to store plan settings
       _savedPolygonObjectId: null, //to store object id of the saved polygon
+      _savedPolyLines: null, //to store array of parcel lines
 
       constructor: function (options) {
         lang.mixin(this, options);
@@ -104,6 +105,9 @@ define([
           lang.hitch(this, function () {
             this.emit("saveTraversedParcel");
           })));
+        // Handle click event of delete button
+        this.own(on(this.planInfoDeleteButton, "click",
+          lang.hitch(this, this.deleteParcel)));
       },
 
       /**
@@ -128,6 +132,8 @@ define([
             this.documentTypeControl.set('value', "");
           }
         }
+        // hide delete button
+        domClass.add(this.planInfoDeleteButton,"esriCTHidden");
       },
 
       /**
@@ -392,8 +398,17 @@ define([
       * ParcelName, PlanName, DocumentType while editing traverse.
       * @memberOf widgets/ParcelDrafter/PlanInfo
       **/
-      setParcelInformation: function (polygon) {
+      setParcelInformation: function (polygon, polyLines) {
         var documentTypeValue;
+        //get polygon layers object id field
+        var polygonLayerObjIdField = this.map.getLayer(this.config.polygonLayer.id).objectIdField;
+        //set the parcel polygon object id
+        this._savedPolygonObjectId = polygon[0].attributes[polygonLayerObjIdField];
+        //set parcel lines
+        this._savedPolyLines = polyLines;
+        //show delete button only in edit mode
+        domClass.remove(this.planInfoDeleteButton,"esriCTHidden");
+        //show other parcel information in controls
         if (this.parcelNameTextBox) {
           this.parcelNameTextBox.set("value",
             polygon[0].attributes[this.config.polygonLayer.parcelName.name]);
@@ -421,13 +436,14 @@ define([
       * @memberOf widgets/ParcelDrafter/PlanInfo
       **/
       _rollbackSavedPolygon: function () {
-        var polygonLayer, deletePolygon;
+        var polygonLayer, deletePolygon, def;
         deletePolygon = { "attributes": {} };
         polygonLayer = this.map.getLayer(this.config.polygonLayer.id);
         if (polygonLayer && this._savedPolygonObjectId !== null) {
           deletePolygon.attributes[polygonLayer.objectIdField] = this._savedPolygonObjectId;
-          polygonLayer.applyEdits(null, null, [deletePolygon]);
+          def = polygonLayer.applyEdits(null, null, [deletePolygon]);
         }
+        return def;
       },
 
       /**
@@ -435,17 +451,25 @@ define([
       * @memberOf widgets/ParcelDrafter/PlanInfo
       **/
       _rollbackSavedPolyLines: function (savedFeatures) {
-        var polyLineLayer, deletePolyLineArray, deletePolyLine;
+        var polyLineLayer, deletePolyLineArray, deletePolyLine, def;
         deletePolyLineArray = [];
         polyLineLayer = this.map.getLayer(this.config.polylineLayer.id);
         array.forEach(savedFeatures, lang.hitch(this, function (feature) {
           deletePolyLine = { "attributes": {} };
-          deletePolyLine.attributes[polyLineLayer.objectIdField] = feature.objectId;
-          deletePolyLineArray.push(deletePolyLine);
+          //push the features to delete
+          if (feature.hasOwnProperty('objectId')) {
+            deletePolyLine.attributes[polyLineLayer.objectIdField] = feature.objectId;
+            deletePolyLineArray.push(deletePolyLine);
+          } else if (feature.attributes.hasOwnProperty(polyLineLayer.objectIdField)) {
+            deletePolyLine.attributes[polyLineLayer.objectIdField] =
+              feature.attributes[polyLineLayer.objectIdField];
+            deletePolyLineArray.push(deletePolyLine);
+          }
         }));
         if (polyLineLayer && deletePolyLineArray.length > 0) {
-          polyLineLayer.applyEdits(null, null, deletePolyLineArray);
+          def = polyLineLayer.applyEdits(null, null, deletePolyLineArray);
         }
+        return def;
       },
 
       /**
@@ -698,6 +722,39 @@ define([
         }
         dataObj.status = true;
         return dataObj;
+      },
+
+      /**
+      * This function is used to delete parcel details on delete button click
+      * @memberOf widgets/ParcelDrafter/PlanInfo
+      **/
+      deleteParcel: function () {
+        this.loading.show();
+        //delete parcel polygon
+        var deletePolygonDef = this._rollbackSavedPolygon();
+        //once parcel polygon is deleted, delete lines
+        //if error in deleteing parcel show error message and navigate to main page
+        deletePolygonDef.then(lang.hitch(this, function () {
+          //delete parcel lines
+          var deletePolylineDef = this._rollbackSavedPolyLines(this._savedPolyLines);
+          //once parcel lines are deleted show success message and navigate to main page
+          deletePolylineDef.then(lang.hitch(this, function () {
+            this.loading.hide();
+            this._showMessage(this.nls.planInfo.parcelDeletedSuccessMessage);
+            this._savedPolygonObjectId = null;
+            this.emit("displayMainPageAfterSave");
+          }), lang.hitch(this, function () {
+            this.loading.hide();
+            this._savedPolygonObjectId = null;
+            this._showMessage(this.nls.planInfo.parcelDeleteErrorMessage);
+            this.emit("displayMainPageAfterSave");
+          }));
+        }), lang.hitch(this, function () {
+          this.loading.hide();
+          this._savedPolygonObjectId = null;
+          this._showMessage(this.nls.planInfo.parcelDeleteErrorMessage);
+          this.emit("displayMainPageAfterSave");
+        }));
       }
     });
   });

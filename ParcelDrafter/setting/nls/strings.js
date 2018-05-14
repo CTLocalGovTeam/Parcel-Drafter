@@ -41,8 +41,9 @@ define({
       "arcLengthFieldLabel": "Arc Length", // shown as a label in config for Arc Length.
       "lineTypeFieldLabel": "Line Type", // shown as a label in config for Line Type.
       "parcelPointSymbolLabel": "Parcel Point Symbol", // shown as a label in config for Parcel Point Symbol.
-      "parcelPointSymbolHintText": "Hint: Used to display point symbol for the origin of the line.",
-      // Shown as a hint text in config for parcel point symbol.
+      "parcelPointSymbolHintText": "Hint: Used to display point symbol for the origin of the line.", // shown as a hint text in config for parcel point symbol.
+      "startOrRotationSymbolLabel": "Start and Rotate Point Symbol", // shown as a label in config for Parcel Start/Rotation Symbol.
+      "startOrRotationSymbolHintText": "Hint: Used to display start and rotate point symbol.", // shown as a hint text in config for Start/Rotation symbol.
       "symbolPickerPreviewText": "Preview", // shown as a label in config for Preview of symbol picker.
       "selectLineLayerLabel": "Select line layer" // shown as a label in config for line layer pop up
     },

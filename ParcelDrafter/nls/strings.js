@@ -25,6 +25,7 @@ define({
     "mapTooltipForEditNewTraverse": "Please select a parcel to edit", // Shown as tooltip when mouse move over the map once edit new traverse is selected
     "mapTooltipForUpdateStartPoint": "Click to update start point", // Shown as tooltip when mouse move over the map once traverse grid page is shown
     "mapTooltipForScreenDigitization": "Click to add parcel point", // Shown as tooltip when mouse move over the map once screen digitization tool is activated
+    "mapTooltipForUpdatingRotaionPoint": "Click to update rotation point", // Shown as tooltip when mouse move over the map once screen digitization tool is activated
     "mapTooltipForRotate": "Drag to rotate", // Shown as tooltip when mouse drag over the map once rotation tool is activated
     "mapTooltipForScale": "Drag to scale", // Shown as tooltip when mouse drag over the map once scaling tool is activated
     "backButtonTooltip": "Back", // Shown as tooltip on back buttons
@@ -49,7 +50,8 @@ define({
       "expandGridTooltipText": "Expand grid", // Show on hover of the expand grid button
       "collapseGridTooltipText": "Collapse grid", // Show on hover of the collapse grid button
       "zoomToLocationTooltipText": "Zoom to location", // Show on hover of the zoomToLocation button
-      "onScreenDigitizationTooltipText": "Digitize" // Show on hover of the Digitization button
+      "onScreenDigitizationTooltipText": "Digitize", // Show on hover of the Digitization button
+      "updateRotationPointTooltipText": "Update rotation point" // Show on hover of the update rotation point button
     },
 
     "traverseSettings": {
@@ -98,6 +100,8 @@ define({
       "unableToSaveParcelLines": "Unable to save parcel lines.", // Shown when error occurs while saving parcel lines
       "unableToUpdateParcelLines": "Unable to update parcel lines.", // Shown when error occurs while updating parcel lines
       "parcelSavedSuccessMessage": "Parcel saved successfully.", // Shown when parcel is saved successfully
+      "parcelDeletedSuccessMessage": "Parcel deleted successfully.", // Shown when parcel is deleted successfully
+      "parcelDeleteErrorMessage": "Error in deleteing parcel.", // Shown when parcel is deleted successfully
       "enterValidParcelNameMessage": "Please enter valid parcel name.", // Shown as error message when parcel name is invalid
       "enterValidPlanNameMessage": "Please enter valid plan name.", // Shown as error message when parcel name is invalid
       "enterValidDocumentTypeMessage": "Invalid document type.", // Shown as error message when document type is invalid

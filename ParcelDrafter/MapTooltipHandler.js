@@ -132,7 +132,7 @@ define([
       _createTooltip: function () {
         //create tool-tip to be shown on map move
         this._mapTooltip = domConstruct.create("div", {
-          "class": "tooltip",
+          "class": "esriCTMapTooltip",
           "innerHTML": this.toolTipText
         }, this.map.container);
         domStyle.set(this._mapTooltip, "position", "fixed");

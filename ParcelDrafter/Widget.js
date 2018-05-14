@@ -153,6 +153,10 @@ define([
       * @memberOf widgets/ParcelDrafter/Widget
       */
       onClose: function () {
+        //if planSetting panel is open call onClose method to store updated planSettings in local storage
+        if (this._prevOpenPanel === "planSettingsPage"){
+          this._planSettingsInstance.onClose();
+        }
         //disconnect map click handler if active and deactivate all tools
         if (this._mapTooltipHandler) {
           this._toggleSnapping(false);
@@ -476,6 +480,10 @@ define([
       * @memberOf widgets/ParcelDrafter/Widget
       */
       _onMapPointSelected: function (mapPoint) {
+        //Do nothing ifupdate rotation tool is active
+        if (this._mapTooltipHandler.toolTipText === this.nls.mapTooltipForUpdatingRotaionPoint) {
+          return;
+        }
         // if map tooltip handler text is set to screen digitization widget
         // add parcel points on map else start point is selected/updated
         if (this._mapTooltipHandler.toolTipText === this.nls.mapTooltipForScreenDigitization) {
@@ -496,7 +504,8 @@ define([
             }
           }
           this._startPoint = mapPoint;
-          this._newTraverseInstance.setStartPoint(this._startPoint);
+          //set start point and and also reset roation point
+          this._newTraverseInstance.setStartPoint(this._startPoint, true);
         }
       },
 
@@ -628,6 +637,15 @@ define([
           lang.hitch(this, function () {
             this._onDeactivateDigitization();
           })));
+        this.own(this._newTraverseInstance.on("activateUpdateRotationPointTool",
+          lang.hitch(this, function () {
+            this._onActivateUpdateRotationPoint();
+          })));
+        this.own(this._newTraverseInstance.on("deActivateUpdateRotationPointTool",
+          lang.hitch(this, function () {
+            this._onDeactivateUpdateRotationPoint();
+          })));
+
         //Handle click event of parcelInfo cancel button
         this.own(this._newTraverseInstance.on("cancelTraverse", lang.hitch(this, function () {
           this._confirmCancelTraverse();
@@ -655,6 +673,7 @@ define([
         if (isEnable) {
           this._mapTooltipHandler.connectMouseDragHandler(this.nls.mapTooltipForRotate);
           this._newTraverseInstance.deActivateDigitizationTool();
+          this._newTraverseInstance.deActivateUpdateRotationPointTool();
         } else {
           this._isUpdateStartPoint = true;
           this._mapTooltipHandler.disconnectEventHandler();
@@ -671,6 +690,7 @@ define([
         if (isEnable) {
           this._mapTooltipHandler.connectMouseDragHandler(this.nls.mapTooltipForScale);
           this._newTraverseInstance.deActivateDigitizationTool();
+          this._newTraverseInstance.deActivateUpdateRotationPointTool();
         } else {
           this._newTraverseInstance.distance = null;
           this._isUpdateStartPoint = true;
@@ -703,6 +723,28 @@ define([
       },
 
       /**
+     * on activating digitization enable map click to add new line
+     * @memberOf widgets/ParcelDrafter/Widget
+     **/
+      _onActivateUpdateRotationPoint: function () {
+        this._mapTooltipHandler.disconnectEventHandler();
+        this._mapTooltipHandler.connectEventHandler(this.nls.mapTooltipForUpdatingRotaionPoint);
+        this._newTraverseInstance.deactivateParcelTools();
+        this._isUpdateStartPoint = false;
+        this._toggleSnapping(true);
+      },
+
+      /**
+      * onDeactivating digitization enable map click to update parcel location on map
+      * @memberOf widgets/ParcelDrafter/Widget
+      **/
+      _onDeactivateUpdateRotationPoint: function () {
+        this._mapTooltipHandler.updateTooltip(this.nls.mapTooltipForUpdateStartPoint);
+        this._isUpdateStartPoint = true;
+        this._toggleSnapping(true);
+      },
+
+      /**
       * Creates plan settings
       * @memberOf widgets/ParcelDrafter/Widget
       **/
@@ -711,7 +753,8 @@ define([
         this._planSettingsInstance = new PlanSettings({
           nls: this.nls,
           config: this.config,
-          appConfig: this.appConfig
+          appConfig: this.appConfig,
+          widgetId: this.id
         }, domConstruct.create("div", {}, this.planSettingsNode));
         this.own(this._planSettingsInstance.on("planSettingsChanged",
           lang.hitch(this, function (updatedSettings) {

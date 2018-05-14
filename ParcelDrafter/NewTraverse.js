@@ -47,6 +47,7 @@ define([
   'dijit/popup',
   'dojo/Deferred',
   'esri/geometry/Extent',
+  'esri/geometry/Point',
   'dojo/dom-geometry'
 ],
   function (
@@ -82,6 +83,7 @@ define([
     dijitPopup,
     Deferred,
     Extent,
+    Point,
     domGeom
   ) {
     return declare([BaseWidget, _WidgetsInTemplateMixin, Evented], {
@@ -136,8 +138,11 @@ define([
         this._handleEventsOnInitialRow();
         //Display symbol selector div for new row
         this._symbolSelector = this._createLineSelector(this.lineSymbolNode, null);
+        //Handel button clicks
         this.own(on(this.screenDigitizationNode, "click", lang.hitch(this,
           this._onDigitizationButtonClicked)));
+        this.own(on(this.updateRotationPointNode, "click", lang.hitch(this,
+          this._onUpdateRotationPointButtonClicked)));
         this.own(on(this.zoomToNode, "click", lang.hitch(this, this._onZoomButtonClicked)));
         this.own(on(this.expandCollapseNode, "click", lang.hitch(this,
           this._onExpandCollapseClicked)));
@@ -189,9 +194,18 @@ define([
         this.parcelPolygonGraphicsLayer = new GraphicsLayer();
         this.parcelLinesGraphicsLayer = new GraphicsLayer();
         this.parcelPointsGraphicsLayer = new GraphicsLayer();
+        this.rotationPointsGraphicsLayer = new GraphicsLayer();
+        this.own(on(this.parcelPointsGraphicsLayer, "click", lang.hitch(this, function (evt) {
+          // If update rotation tool is active then only set the selected point as rotationPoint
+          if (domClass.contains(this.updateRotationPointNode, "esriCTEnableButton")) {
+            this._setRotationPoint(evt.graphic.attributes.rowIndex, evt.graphic.geometry);
+            this._showRotationPoint();
+          }
+        })));
         this.map.addLayer(this.parcelPolygonGraphicsLayer);
         this.map.addLayer(this.parcelLinesGraphicsLayer);
         this.map.addLayer(this.parcelPointsGraphicsLayer);
+        this.map.addLayer(this.rotationPointsGraphicsLayer);
       },
 
       /**
@@ -772,21 +786,20 @@ define([
           this._itemList.push(values);
           this._createRow(values, this._itemList.length - 1);
           this._resetEntryRow(isAddedFromScreenDigitization);
+          //if radius is not set it means draw line else draw arc
+          if (radius === "" || radius === "0" || radius === 0) {
+            //draw new line and set the extent to line layer
+            this._drawStraightLine(values, true);
+            // show traverse tools zoom and expandCollapse
+            this._showHideTraverseTools();
+          } else {
+            this._drawArc(values, true);
+            // show traverse tools zoom and expandCollapse
+            this._showHideTraverseTools();
+          }
           //if compass rule is applied set closure, else draw lines directly
           if (this.appliedCompassRule) {
             this.setParcelClosure();
-          } else {
-            //if radius is not set it means draw line else draw arc
-            if (radius === "" || radius === "0" || radius === 0) {
-              //draw new line and set the extent to line layer
-              this._drawStraightLine(values, true);
-              // show traverse tools zoom and expandCollapse
-              this._showHideTraverseTools();
-            } else {
-              this._drawArc(values, true);
-              // show traverse tools zoom and expandCollapse
-              this._showHideTraverseTools();
-            }
           }
         } else {
           if (!this.bearingNode.isValid()) {
@@ -852,8 +865,26 @@ define([
         // else disables the digitization tool
         if (domClass.contains(this.screenDigitizationNode, "esriCTEnableButton")) {
           this.emit("activateDigitizationTool");
+          this.deActivateUpdateRotationPointTool();
         } else {
           this.emit("deActivateDigitizationTool");
+        }
+      },
+
+      /**
+      * enables on screen digitization widget
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      _onUpdateRotationPointButtonClicked: function () {
+        // enables/disables on screen digitization tool
+        domClass.toggle(this.updateRotationPointNode, "esriCTEnableButton");
+        // if screen digitization tool enabled the activates tool
+        // else disables the digitization tool
+        if (domClass.contains(this.updateRotationPointNode, "esriCTEnableButton")) {
+          this.emit("activateUpdateRotationPointTool");
+          this.deActivateDigitizationTool();
+        } else {
+          this.emit("deActivateUpdateRotationPointTool");
         }
       },
 
@@ -888,8 +919,13 @@ define([
           lang.hitch(this, function (rotationAngle) {
             if (rotationAngle !== this._rotationAngle) {
               this._rotationAngle = rotationAngle;
-              if (this._itemList && this._itemList.length > 0) {
-                this.setStartPoint(this.startPoint);
+              //if rotaion point is updated use the updated rotation point and update the start point
+              if (this._rotationPointInfo && this._rotationPointInfo.rotationPoint) {
+                this._updateStartPointFromRotationPoint();
+              } else {
+                if (this._itemList && this._itemList.length > 0) {
+                  this.setStartPoint(this.startPoint);
+                }
               }
             }
           })));
@@ -1169,10 +1205,11 @@ define([
           //so calculations for adjustments will executed and then it will set start-point,
           //else set start Point directly
           if (this.appliedCompassRule) {
-            this.setParcelClosure(true);
+            this.setParcelClosure(true, true);
           } else {
             //as we have removed the point now redraw everything
-            this.setStartPoint(this.startPoint);
+            // also rest the rotaion point, so pass second param as true
+            this.setStartPoint(this.startPoint, true);
           }
           //if tb is updated the values in bearing will be changed so updated the grid
           if (updatedTb) {
@@ -1238,7 +1275,8 @@ define([
           }
         }
         //as rows are moved need to update the drawing as well
-        this.setStartPoint(this.startPoint);
+        //also pass second param as true to reset the rotation point
+        this.setStartPoint(this.startPoint, true);
         //if tb values are updated regenerate traverse gri to reflect the bearings
         if (updatedTB) {
           this._reGenerateTraverseGrid();
@@ -1361,10 +1399,11 @@ define([
               //so calculations for adjustments will executed and then it will set start-point,
               //else set start Point directly
               if (this.appliedCompassRule) {
-                this.setParcelClosure(true);
+                this.setParcelClosure(true, true);
               } else {
                 //Finally set start point it will redraw everything
-                this.setStartPoint(this.startPoint);
+                //also pass second param as true to reset the rotation point
+                this.setStartPoint(this.startPoint, true);
               }
               if (updatedTangentBearings || isPopup) {
                 this._reGenerateTraverseGrid();
@@ -1515,6 +1554,99 @@ define([
         this._createTraverseGrid();
       },
 
+
+      /**
+      * Show rotaton point using configured symbol on graphics layer
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      _showRotationPoint: function () {
+        var rotationPointSymbol, rotaionPointGeom = this.startPoint;
+        if (!this.config.startOrRotaionSymbol) {
+          rotationPointSymbol = jsonUtils.fromJson(this.config.pointSymbol);
+        } else {
+          rotationPointSymbol = jsonUtils.fromJson(this.config.startOrRotaionSymbol);
+        }
+        if (this._rotationPointInfo && this._rotationPointInfo.rotationPoint) {
+          rotaionPointGeom = this._rotationPointInfo.rotationPoint;
+        }
+        if (this.map.spatialReference.wkid !== 4326) {
+          geometryUtils.getProjectedGeometry(rotaionPointGeom, this.map.spatialReference,
+            this.geometryService).then(lang.hitch(this, function (projectedGeometry) {
+              if (projectedGeometry) {
+                //create new graphic with the projected geometry
+                var newGraphic = new Graphic(projectedGeometry);
+                newGraphic.setSymbol(rotationPointSymbol);
+                this.rotationPointsGraphicsLayer.clear();
+                this.rotationPointsGraphicsLayer.add(newGraphic);
+              }
+            }));
+        } else {
+          //create new graphic with the projected geometry
+          var newGraphic = new Graphic(rotaionPointGeom);
+          newGraphic.setSymbol(rotationPointSymbol);
+          this.rotationPointsGraphicsLayer.clear();
+          this.rotationPointsGraphicsLayer.add(newGraphic);
+        }
+      },
+
+      /**
+      * Reset rotation point to start of the parcel
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      resetRotationPoint: function (rotationPoint) {
+        var rotationPointIndex = 0;
+        this._setRotationPoint(rotationPointIndex, rotationPoint);
+      },
+
+      /**
+      * Sets rotation point
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      _setRotationPoint: function (rotationPointIndex, rotationPoint) {
+        var startForNext = rotationPoint;
+        var defaultStartPointSpatialRef = new SpatialReference(4326);
+        geometryUtils.getProjectedGeometry(startForNext, defaultStartPointSpatialRef,
+          this.geometryService).then(
+            lang.hitch(this, function (projectedGeometry) {
+              startForNext = projectedGeometry;
+              this._rotationPointInfo = {
+                "rotationPointIndex": rotationPointIndex,
+                "rotationPoint": startForNext
+              };
+            }));
+      },
+
+      /**
+      * Updates start point in ref to rotation point
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      _updateStartPointFromRotationPoint: function () {
+        var startForNext = this._rotationPointInfo.rotationPoint;
+        var rotationPointIndex = this._rotationPointInfo.rotationPointIndex;
+        if (this._rotationAngle !== null) {
+          for (var j = rotationPointIndex - 1; j >= 0; j--) {
+            var newEnd, arcInfo;
+            var value = this._itemList[j];
+            var angle = Number(value.BearingConversions.naDD) + this._rotationAngle;
+            //apply south azimuth as we are going backward to take the start point
+            angle = utils.getSouthAzimuthFromNorthAzimuth(angle);
+            //if no radius then draw straight line else draw arcs
+            if (value.Radius === "" || value.Radius === "0" || value.Radius === 0) {
+              newEnd =
+                geometryUtils.getDestinationPoint(startForNext, angle,
+                  value.LengthConversions.meters);
+            } else {
+              arcInfo = this.getArcInfo(startForNext, angle,
+                value.RadiusConversions.meters, value.ChordLengthConversions.meters);
+              newEnd = arcInfo.endPoint;
+            }
+            //update the start for next line as current lines endPoint
+            startForNext = newEnd;
+          }
+          this.setStartPoint(startForNext);
+        }
+      },
+
       /**
       * Redraws the parcel points and line with the already entered values
       * @memberOf widgets/ParcelDrafter/NewTraverse
@@ -1545,31 +1677,36 @@ define([
       * Note: It will always set the start point in 4326 as.
       * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
-      setStartPoint: function (startPoint) {
+      setStartPoint: function (startPoint, resetRotationPoint) {
         var defaultStartPointSpatialRef = new SpatialReference(4326);
         geometryUtils.getProjectedGeometry(startPoint, defaultStartPointSpatialRef,
           this.geometryService).then(
-          lang.hitch(this, function (projectedGeometry) {
-            //set new start point
-            this.startPoint = projectedGeometry;
-            //as start point is changed this will be the start-point for next line
-            this._startPointForNextLine = lang.clone(projectedGeometry);
-            this._orgStartPointForNextLine = lang.clone(projectedGeometry);
-            //clear applied compass rule flag
-            this.appliedCompassRule = false;
-            //if already some point are added redraw the parcel
-            if (this._itemList.length > 0) {
-              this._reDrawParcel();
-            } else {
-              //before drawing the start point clear layers
-              this.parcelPointsGraphicsLayer.clear();
-              this.parcelLinesGraphicsLayer.clear();
-              //reset the boundary lines array
-              this._arrayOfAllBoundaryLines = [];
-              //draw new start point
-              this._drawPoint(startPoint);
-            }
-          }));
+            lang.hitch(this, function (projectedGeometry) {
+              //set new start point
+              this.startPoint = projectedGeometry;
+              if (resetRotationPoint) {
+                this.resetRotationPoint(this.startPoint);
+              }
+              //show rotation point
+              this._showRotationPoint();
+              //as start point is changed this will be the start-point for next line
+              this._startPointForNextLine = lang.clone(projectedGeometry);
+              this._orgStartPointForNextLine = lang.clone(projectedGeometry);
+              //clear applied compass rule flag
+              this.appliedCompassRule = false;
+              //if already some point are added redraw the parcel
+              if (this._itemList.length > 0) {
+                this._reDrawParcel();
+              } else {
+                //before drawing the start point clear layers
+                this.parcelPointsGraphicsLayer.clear();
+                this.parcelLinesGraphicsLayer.clear();
+                //reset the boundary lines array
+                this._arrayOfAllBoundaryLines = [];
+                //draw new start point
+                this._drawPoint(startPoint);
+              }
+            }));
       },
 
       /**
@@ -1866,6 +2003,14 @@ define([
           }
         }
       },
+      /**
+      * Disables on screen digitization widget
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      deActivateUpdateRotationPointTool: function () {
+        //disables on screen digitization tool
+        domClass.remove(this.updateRotationPointNode, "esriCTEnableButton");
+      },
 
       /**
       * Disables on screen digitization widget
@@ -1885,33 +2030,33 @@ define([
         defaultStartPointSpatialRef = new SpatialReference(4326);
         geometryUtils.getProjectedGeometry(mapPoint, defaultStartPointSpatialRef,
           this.geometryService).then(
-          lang.hitch(this, function (projectedGeometry) {
-            angle = geometryUtils.getAngleBetweenPoints(this._startPointForNextLine,
-              projectedGeometry);
-            //if angle is 360 consider it as 0
-            if (angle === 360) {
-              angle = 0;
-            }
-            distance = geometryUtils.getDistanceBetweenPoints(this._startPointForNextLine,
-              projectedGeometry);
-            //returned angle will always be in NA DD so convert it to quadrant format
-            //so that it will not get override in case of SA
-            quadrantAngle = this.getAngleFromDDTOQB(angle);
-            this.bearingNode.set("value", quadrantAngle);
-            //returned distance will always be in meters, based on plan settings convert if required
-            if (this._planSettings.distanceAndLengthUnits === "uSSurveyFeet") {
-              distance = utils.metersToUSSurveyFeet(distance);
-            }
-            //Divide the distance by scale value if scaling is applied and point added from screen
-            if (this._scaleValue > 0) {
-              distance = distance / this._scaleValue;
-            }
-            this.lengthNode.set("value", distance);
-            //as we can only create straight lines from screen digitization always pass empty radius
-            this.radiusNode.set("value", "");
-            //set the added from screenDigitization flag to true
-            this._addNewItem(true);
-          }));
+            lang.hitch(this, function (projectedGeometry) {
+              angle = geometryUtils.getAngleBetweenPoints(this._startPointForNextLine,
+                projectedGeometry);
+              //if angle is 360 consider it as 0
+              if (angle === 360) {
+                angle = 0;
+              }
+              distance = geometryUtils.getDistanceBetweenPoints(this._startPointForNextLine,
+                projectedGeometry);
+              //returned angle will always be in NA DD so convert it to quadrant format
+              //so that it will not get override in case of SA
+              quadrantAngle = this.getAngleFromDDTOQB(angle);
+              this.bearingNode.set("value", quadrantAngle);
+              //returned distance will always be in meters, based on plan settings convert if required
+              if (this._planSettings.distanceAndLengthUnits === "uSSurveyFeet") {
+                distance = utils.metersToUSSurveyFeet(distance);
+              }
+              //Divide the distance by scale value if scaling is applied and point added from screen
+              if (this._scaleValue > 0) {
+                distance = distance / this._scaleValue;
+              }
+              this.lengthNode.set("value", distance);
+              //as we can only create straight lines from screen digitization always pass empty radius
+              this.radiusNode.set("value", "");
+              //set the added from screenDigitization flag to true
+              this._addNewItem(true);
+            }));
       },
 
       /**
@@ -1926,7 +2071,7 @@ define([
       **/
       getParcelCloseDetails: function () {
         var boundaryLinesCount, parcelCloseDetails, isValid, compassStartPoint, compassEndPoint,
-        miscloseDistance, miscloseBearing, pt;
+          miscloseDistance, miscloseBearing, pt;
         //set default return object
         parcelCloseDetails = {
           isClosed: false,
@@ -1986,7 +2131,7 @@ define([
       * Function to show/hide the misclose details and parcel tools if parcel is closed
       * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
-      setParcelClosure: function (forceSetStartPoint) {
+      setParcelClosure: function (forceSetStartPoint, resetRotationPoint) {
         var miscloseDetails, parcelCloseDetails;
         parcelCloseDetails = this.getParcelCloseDetails();
         if (parcelCloseDetails.isClosed) {
@@ -1998,12 +2143,12 @@ define([
           if (miscloseDetails.adjustPoints) {
             this.adjustPoints = this._applyCompassRule(miscloseDetails);
             if ((this.adjustPoints && !this.appliedCompassRule) || forceSetStartPoint) {
-              this.setStartPoint(this.startPoint);
+              this.setStartPoint(this.startPoint, resetRotationPoint);
             }
           } else {
             this.adjustPoints = false;
             if (this.appliedCompassRule || forceSetStartPoint) {
-              this.setStartPoint(this.startPoint);
+              this.setStartPoint(this.startPoint, resetRotationPoint);
             }
           }
         } else {
@@ -2013,7 +2158,7 @@ define([
           this.adjustPoints = false;
           if (this.appliedCompassRule || forceSetStartPoint) {
             this.appliedCompassRule = false;
-            this.setStartPoint(this.startPoint);
+            this.setStartPoint(this.startPoint, resetRotationPoint);
           }
         }
       },
@@ -2039,7 +2184,8 @@ define([
           calculatedArea = miscloseDetails.AreaConversions[this._planSettings.areaUnits];
           //fix the value to be shown
           if (!isNaN(parseFloat(calculatedArea))) {
-            calculatedArea = parseFloat(calculatedArea).toFixed(3);
+            //Fix area to show proper value when values like 39999.99 is shown instead of 40000.00
+            calculatedArea = utils.honourPopupRounding(2, calculatedArea.toFixed(1));
           }
         } else {
           calculatedArea = 0;
@@ -2115,6 +2261,39 @@ define([
       },
 
       /**
+      * This function will return a polygon which will be at the origin of spatial ref
+      * @memberOf widgets/ParcelDrafter/NewTraverse
+      **/
+      _getPolygonAtOrigin: function () {
+        var startForNext = new Point(0, 0, new SpatialReference(4326));
+        var linesPathArray = [];
+        array.forEach(this._itemList, lang.hitch(this, function (value) {
+          var i, newEnd, arcInfo, lineGeometry;
+          //consider only boundary lines
+          if (value.LineSymbol.type === this.config.BoundaryLineType) {
+            //if no radius then draw straight line else draw arcs
+            if (value.Radius === "" || value.Radius === "0" || value.Radius === 0) {
+              newEnd =
+                geometryUtils.getDestinationPoint(startForNext,
+                  value.BearingConversions.naDD, value.LengthConversions.meters);
+              lineGeometry = geometryUtils.getLineBetweenPoints([startForNext, newEnd]);
+            } else {
+              arcInfo = this.getArcInfo(startForNext, value.BearingConversions.naDD,
+                value.RadiusConversions.meters, value.ChordLengthConversions.meters);
+              newEnd = arcInfo.endPoint;
+              lineGeometry = geometryUtils.getLineBetweenPoints(arcInfo.arcGeometryPointsArray);
+            }
+            //update the start for next line as current lines endPoint
+            startForNext = newEnd;
+            for (i = 0; i < lineGeometry.paths.length; i++) {
+              linesPathArray.push(lineGeometry.paths[i]);
+            }
+          }
+        }));
+        return geometryUtils.getPolygonFromPolyLines(linesPathArray, true);
+      },
+
+      /**
       * Returns calculated area
       * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
@@ -2122,8 +2301,7 @@ define([
         var calculatedArea, boundaryPolygon, boundaryGraphic;
         if (this._arrayOfAllBoundaryLines && this._arrayOfAllBoundaryLines.length > 0) {
           // calculate area of the polygon
-          boundaryPolygon = geometryUtils.getPolygonFromPolyLines(
-            this._arrayOfAllBoundaryLines, true);
+          boundaryPolygon = this._getPolygonAtOrigin();
           if (boundaryPolygon) {
             boundaryGraphic = new Graphic(boundaryPolygon);
             this.parcelPolygonGraphicsLayer.clear();
@@ -2306,7 +2484,7 @@ define([
       initEditing: function (startPoint, featureSet, lineLayerSpatialReference) {
         var i, obj, lineSymbol, editBearingDataArr, units, planSettingsNADD, scale,
           rotation, statedArea;
-        this._planInfoInstance.setParcelInformation(this.polygonDeleteArr);
+        this._planInfoInstance.setParcelInformation(this.polygonDeleteArr, featureSet.features);
         //set Rotation and scale
         rotation = this.polygonDeleteArr[0].attributes[this.config.polygonLayer.rotation.name];
         scale = this.polygonDeleteArr[0].attributes[this.config.polygonLayer.scale.name];
@@ -2391,7 +2569,7 @@ define([
         //to show the traverse tools
         this._showHideTraverseTools();
         //draw the parcel on map with new data
-        this.setStartPoint(startPoint);
+        this.setStartPoint(startPoint, true);
         //in case of edit always show the boundary line as default symbol
         this.setBoundaryLineSymbol();
       },
@@ -2444,6 +2622,7 @@ define([
         this.parcelLinesGraphicsLayer.clear();
         this.parcelPointsGraphicsLayer.clear();
         this.parcelPolygonGraphicsLayer.clear();
+        this.rotationPointsGraphicsLayer.clear();
         //Reset entry row
         this._resetEntryRow();
         //clear dnd node
@@ -2468,6 +2647,8 @@ define([
         this._symbolSelector.setDefault();
         //deactivate digitization tool
         domClass.remove(this.screenDigitizationNode, "esriCTEnableButton");
+        //deactivate update rotation point tool
+        domClass.remove(this.updateRotationPointNode, "esriCTEnableButton");
         //reset the rotation & scale values
         this._parcelToolInstance.resetTools();
         //deactivate parcel tools
@@ -2486,6 +2667,8 @@ define([
         this._planInfoInstance.resetValues();
         // reset stated area
         this._misCloseDetailsInstance.traverseStatedArea.set("value", null);
+        //reset updated rotation point info
+        this._rotationPointInfo = null;
         //hide popup dialog
         this.closePopup();
       },

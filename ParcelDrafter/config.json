@@ -1,4 +1,29 @@
 {
+  "startOrRotaionSymbol": {
+    "color": [
+      0,
+      250,
+      0,
+      255
+    ],
+    "size": 15,
+    "angle": 0,
+    "xoffset": 0,
+    "yoffset": 0,
+    "type": "esriSMS",
+    "style": "esriSMSSquare",
+    "outline": {
+      "color": [
+        29,
+        29,
+        53,
+        255
+      ],
+      "width": 0.75,
+      "type": "esriSLS",
+      "style": "esriSLSSolid"
+    }
+  },
   "pointSymbol": {
     "color": [
       240,
