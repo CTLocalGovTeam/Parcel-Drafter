@@ -25,6 +25,8 @@ define([
   'dojo/dom-class',
   'dojo/query',
   './utils',
+  'jimu/utils',
+  'libs/storejs/store',
   'dijit/form/Select'
 ],
   function (
@@ -37,13 +39,16 @@ define([
     Evented,
     domClass,
     query,
-    utils
+    utils,
+    jimuUtils,
+    store
   ) {
     return declare([BaseWidget, _WidgetsInTemplateMixin, Evented], {
       baseClass: 'jimu-widget-ParcelDrafter-PlanSettings',
       templateString: PlanSettingsTemplate,
       selectedPlanSettings: {}, //Holds selected planSettings
       planSettingsOptions: lang.clone(utils.planSettingsOptions), //Object that holds all the options and their keys
+      planSettingsKey: null, // Holds the key which is used to uniquely identfy the settings stored in cache
 
       constructor: function (options) {
         lang.mixin(this, options);
@@ -51,16 +56,30 @@ define([
 
       //Load all the options on startup
       startup: function () {
+        //get stored settings in  cache
+        var storedSettings = this._retriveFromLocalCache();
+        //if no settings in cache, set the default values to first in the option
+        if (!storedSettings) {
+          storedSettings = {
+            areaUnits: this.planSettingsOptions.areaUnits[0],
+            circularCurveParameters: this.planSettingsOptions.circularCurveParameters[0],
+            directionOrAngleType: this.planSettingsOptions.directionOrAngleType[0],
+            directionOrAngleUnits: this.planSettingsOptions.directionOrAngleUnits[0],
+            distanceAndLengthUnits: this.planSettingsOptions.distanceAndLengthUnits[0]
+          };
+        }
         //load options for all drop downs
         this._loadOptionsForDropDown(this.directionOrAngleType, this.planSettingsOptions
-          .directionOrAngleType);
+          .directionOrAngleType, storedSettings.directionOrAngleType);
         this._loadOptionsForDropDown(this.directionOrAngleUnits, this.planSettingsOptions
-          .directionOrAngleUnits);
+          .directionOrAngleUnits, storedSettings.directionOrAngleUnits);
         this._loadOptionsForDropDown(this.distanceAndLengthUnits, this.planSettingsOptions
-          .distanceAndLengthUnits);
-        this._loadOptionsForDropDown(this.areaUnits, this.planSettingsOptions.areaUnits);
+          .distanceAndLengthUnits, storedSettings.distanceAndLengthUnits);
+        this._loadOptionsForDropDown(this.areaUnits, this.planSettingsOptions.areaUnits,
+          storedSettings.areaUnits);
         this._loadOptionsForDropDown(this.circularCurveParameters, this.planSettingsOptions
-          .circularCurveParameters);
+          .circularCurveParameters, storedSettings.circularCurveParameters);
+
         //send by default updated parameters
         this.onPlansettingsChanged();
       },
@@ -68,6 +87,7 @@ define([
       postCreate: function () {
         this.inherited(arguments);
         //set widget variables
+        this.planSettingsKey = this.getKey();
         this.selectedPlanSettings = {};
         this.planSettingsOptions = lang.clone(utils.planSettingsOptions);
         //set class to main container
@@ -100,7 +120,7 @@ define([
       * Add options to passed dropdown
       * @memberOf widgets/ParcelDrafter/PlanSettings
       **/
-      _loadOptionsForDropDown: function (dropDown, dropDownOptions) {
+      _loadOptionsForDropDown: function (dropDown, dropDownOptions, storedOption) {
         var options = [], option;
         //Add options for selected dropdown
         array.forEach(dropDownOptions, lang.hitch(this, function (type) {
@@ -108,6 +128,10 @@ define([
             value: type,
             label: this.nls.planSettings[type] || window.jimuNls.units[type]
           };
+          //select the stored option
+          if (storedOption === type) {
+            option.selected = true;
+          }
           options.push(option);
         }));
         dropDown.addOption(options);
@@ -165,7 +189,46 @@ define([
           "areaUnits": this.areaUnits.get('value'),
           "circularCurveParameters": this.circularCurveParameters.get('value')
         };
+        this._saveToLocalCache(this.selectedPlanSettings);
         this.emit("planSettingsChanged", this.selectedPlanSettings);
+      },
+
+      /**
+      * Set's the selectedPlanSettings in local cache
+      * @memberOf widgets/ParcelDrafter/PlanSettings
+      **/
+      _saveToLocalCache: function (data) {
+        try {
+          store.set(this.planSettingsKey, data);
+        } catch (err) {
+          console.log("ParcelDrafter: Error in storeing settings to local cache.");
+        }
+      },
+
+      /**
+      * Retrives the store planSettings from local cache
+      * @memberOf widgets/ParcelDrafter/PlanSettings
+      **/
+      _retriveFromLocalCache: function () {
+        var data = null;
+        try {
+          data = store.get(this.planSettingsKey);
+        } catch (err) {
+          console.log("ParcelDrafter: Error in retriving settings from local cache.");
+        }
+        return data;
+      },
+
+      /**
+      * Returs the key to store/fetch data from local cache
+      * @memberOf widgets/ParcelDrafter/PlanSettings
+      **/
+      getKey: function () {
+        var prefix = "ParcelDrafterPlanSettings";
+        var appId = encodeURIComponent(jimuUtils.getAppIdFromUrl());
+        var widgetId = this.widgetId;
+        //like: ParcelDrafterPlanSettings.appId.widgetId
+        return prefix + "." + appId + "." + widgetId;
       }
     });
   });

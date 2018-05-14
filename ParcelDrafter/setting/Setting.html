@@ -18,7 +18,18 @@
 						</div>
 					</div>
 				</div>
-				<!--2.Parcel point symbol selectors-->
+				<!--2.Start/Rotation point symbol selectors-->
+				<div class="esriCTLayerContainer row">
+					<div class="esriCTLabel esriCTPointSymbolLabel esriCTEllipsis">
+						${nls.parcelLineLayer.startOrRotationSymbolLabel}
+					</div>
+					<div class="esriCTPreviewField" data-dojo-attach-point="startOrRotationSymbolNode">
+					</div>
+					<div class="esriCTHint esriCTPreviewHintField">
+						${nls.parcelLineLayer.startOrRotationSymbolHintText}
+					</div>
+				</div>
+				<!--3.Parcel point symbol selectors-->
 				<div class="esriCTLayerContainer row">
 					<div class="esriCTLabel esriCTPointSymbolLabel esriCTEllipsis">
 						${nls.parcelLineLayer.parcelPointSymbolLabel}
@@ -29,7 +40,7 @@
 						${nls.parcelLineLayer.parcelPointSymbolHintText}
 					</div>
 				</div>
-				<!--3.Line Layer field selectors-->
+				<!--4.Line Layer field selectors-->
 				<div class="esriCTMainFieldsetContainer row">
 					<fieldset class="esriCTFieldSet">
 						<legend class="esriCTFieldSetLegend">${nls.parcelLineLayer.selectFieldLegendLabel}</legend>
@@ -89,7 +100,7 @@
 						</div>
 					</fieldset>
 				</div>
-				<!--4. Polygon Layer field selectors-->
+				<!--5. Polygon Layer field selectors-->
 				<div class="esriCTMainFieldsetContainer row">
 					<fieldset class="esriCTFieldSet">
 						<legend class="esriCTFieldSetLegend">${nls.parcelPolygonLayer.selectFieldLegendLabel}</legend>

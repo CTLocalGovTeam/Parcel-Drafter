@@ -106,7 +106,10 @@ define([
         })));
         //Create table to show line types
         this._createTableForLineTypes();
-        //Create symbol picker to choose point symbol fro parcel line end points
+        //Create symbol picker to choose point symbol for start or rotation point
+        this._createSymbolPicker(this.startOrRotationSymbolNode, "startOrRotaionSymbol",
+          "esriGeometryPoint", this.nls.parcelLineLayer.startOrRotationSymbolLabel);
+        //Create symbol picker to choose point symbol for parcel line end points
         this._createSymbolPicker(this.pointSymbolNode, "pointSymbol",
           "esriGeometryPoint", this.nls.parcelLineLayer.parcelPointSymbolLabel);
         //Handle click event to choose snapping layers
@@ -489,6 +492,10 @@ define([
         }
         if (this.miscloseDistanceUnitNode) {
           config.miscloseSnapDistanceUnit = this.miscloseDistanceUnitNode.get('value');
+        }
+        //get point symbol for startOrRotaion point
+        if (this._symbolParams.startOrRotaionSymbol) {
+          config.startOrRotaionSymbol = this._symbolParams.startOrRotaionSymbol;
         }
         //get point symbol for parcel line endPoints
         if (this._symbolParams.pointSymbol) {
@@ -998,8 +1005,12 @@ define([
         //if symbol geometry exist
         if (geometryType) {
           objSymbol.type = utils.getSymbolTypeByGeometryType(geometryType);
+          //Backward compatibility for Rotation symbol, if not found in config use the point symbol
+          if (symbolType === "startOrRotaionSymbol" && !this.config[symbolType]) {
+            this.config[symbolType] = this.config.pointSymbol;
+          }
           //Create symbol chooser based on symbol type.
-          //ie. if symbol is for connection, boundary, parcel point
+          //ie. if symbol is for connection, boundary, parcel point or rotation
           if (this.config && this.config[symbolType]) {
             objSymbol.symbol = jsonUtils.fromJson(this.config[symbolType]);
             symbolChooserNode = this._createPreviewContainer(symbolNode, true);

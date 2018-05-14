@@ -203,7 +203,7 @@ define([
       var polyline, pathsArray = [];
       //iterate through all the points and create paths array
       array.forEach(pointsArray, lang.hitch(this, function (point) {
-        pathsArray.push([point.x, point.y]);
+        pathsArray.push([mo.removeNegativeExponents(point.x), mo.removeNegativeExponents(point.y)]);
       }));
       //check if paths exist and create polyline object from it
       if (pathsArray.length > 0) {

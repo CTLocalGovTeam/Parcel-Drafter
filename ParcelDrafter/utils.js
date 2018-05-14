@@ -577,32 +577,32 @@ define([],
       var formatRegExArr = [];
       // dd-mm-ss.ss-[1234]  (0)
       // RESULT OBJ : res[1] = degree; res[2] = minutes; res[3] = seconds;
-      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0))(?:\-(0|[0-5]?\d)\-(0|[0-5]\d))?\-([1-4])$/, "type": "degreeMinuteSeconds" });
+      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0))(?:\-(0|[0-5]?\d)\-(0|[0-5]\d))?\-([1-4])$/, "type": "degreeMinuteSeconds" });
       // [NS]dd-mm-ss.ss[EW]  (1)
       // RESULT OBJ : res[1] = quadrant 1st character; res[2] = degree; res[3] = minutes; res[4] = seconds; res[5] = quadrant 2nd character;
-      formatRegExArr.push({ "regex": /^([nNsS])((?:\-)?(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0))(?:\-(0|[0-5]?\d)\-(0|[0-5]\d))?([eEwW])$/, "type": "degreeMinuteSeconds" });
+      formatRegExArr.push({ "regex": /^([nNsS])((?:\-)?(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0))(?:\-(0|[0-5]?\d)\-(0|[0-5]\d))?([eEwW])$/, "type": "degreeMinuteSeconds" });
       // [NS]dd.mmssss[EW]  (2)
       // RESULT OBJ : res[1] = quadrant 1st character; res[2] = degree; res[3] = minutes; res[4] = // seconds; res[5] = quadrant 2nd character;
-      formatRegExArr.push({ "regex": /^([nNsS])((?:\-)?(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0))(?:\.([0-5]\d)(?:([0-5]\d))?)?([eEwW])$/, "type": "degreeMinuteSeconds" });
+      formatRegExArr.push({ "regex": /^([nNsS])((?:\-)?(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0))(?:\.([0-5]\d)(?:([0-5]\d))?)?([eEwW])$/, "type": "degreeMinuteSeconds" });
       // dd.mmss[ss]  (3)
       // RESULT OBJ : res[1] = degree; res[2] = minutes; res[3] = seconds;
-      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0))(?:\.([0-5]\d)(?:([0-5]\d))?)?$/, "type": "degreeMinuteSeconds" });
+      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0))(?:\.([0-5]\d)(?:([0-5]\d))?)?$/, "type": "degreeMinuteSeconds" });
       // dd.dddd (4)
       // RESULT OBJ : res[1] = degree;
-      formatRegExArr.push({ "regex": /^((?:(?:\-?)(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0)(?:\.\d+)?)|(?:\-?)(?:\.\d+))$/, "type": "decimalDegree" });
+      formatRegExArr.push({ "regex": /^((?:(?:\-?)(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0)(?:\.\d+)?)|(?:\-?)(?:\.\d+))$/, "type": "decimalDegree" });
       // dd-mm-ss[.ss]  (5)
       // RESULT OBJ : res[1] = degree; res[2] = minutes; res[3] = seconds;
-      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0))(?:\-(0|[0-5]?\d)\-((?:[0-5]\d)))?$/, "type": "degreeMinuteSeconds" });
+      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0))(?:\-(0|[0-5]?\d)\-((?:[0-5]\d)))?$/, "type": "degreeMinuteSeconds" });
       // 'dd.mmssss-[1234]  (6)
       // RESULT OBJ : res[1] = degree; res[2] = minutes; res[3] = seconds; res[4] = quadrant shortcut;
-      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0))(?:\.([0-5]\d)(?:([0-5]\d))?)?(\-[1-4])$/, "type": "degreeMinuteSeconds" });
+      formatRegExArr.push({ "regex": /^((?:\-)?(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0))(?:\.([0-5]\d)(?:([0-5]\d))?)?(\-[1-4])$/, "type": "degreeMinuteSeconds" });
       // [NS]dd.dddd[EW] (7)
       // RESULT OBJ : res[1] = quadrant 1st character; res[2] = degree; res[3] = quadrant 2nd
       // character;
-      formatRegExArr.push({ "regex": /^([nNsS])((?:(?:\-?)(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0)(?:\.\d+)?)|(?:\-?)(?:\.\d+))([eEwW])$/, "type": "decimalDegree" });
+      formatRegExArr.push({ "regex": /^([nNsS])((?:(?:\-?)(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0)(?:\.\d+)?)|(?:\-?)(?:\.\d+))([eEwW])$/, "type": "decimalDegree" });
       // dd.dddd-[1234] (8)
       // RESULT OBJ : res[1] = degree; res[2] = quadrant shortcut;
-      formatRegExArr.push({ "regex": /^((?:(?:\-?)(?:3[0-5]\d|[12]\d{2}|[1-9]\d?|0)(?:\.\d+)?)|(?:\-?)(?:\.\d+))(\-[1-4])$/, "type": "decimalDegree" });
+      formatRegExArr.push({ "regex": /^((?:(?:\-?)(?:3[0-5]\d|[12]\d{2}|[0-9]\d?|0)(?:\.\d+)?)|(?:\-?)(?:\.\d+))(\-[1-4])$/, "type": "decimalDegree" });
       return formatRegExArr;
     };
 
