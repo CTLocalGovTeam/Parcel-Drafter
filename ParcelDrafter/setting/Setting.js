@@ -858,18 +858,18 @@ define([
           editable: 'false',
           width: '150px'
         }, {
-            name: 'value',
-            title: this.nls.lineTypesTable.valueLabel,
-            type: 'text',
-            editable: 'false',
-            width: '100px'
-          }, {
-            name: 'symbol',
-            title: this.nls.common.symbol,
-            type: 'text',
-            editable: 'false',
-            width: '100px'
-          }];
+          name: 'value',
+          title: this.nls.lineTypesTable.valueLabel,
+          type: 'text',
+          editable: 'false',
+          width: '100px'
+        }, {
+          name: 'symbol',
+          title: this.nls.common.symbol,
+          type: 'text',
+          editable: 'false',
+          width: '100px'
+        }];
         args = {
           fields: fields,
           selectable: false
@@ -1001,13 +1001,28 @@ define([
        * @memberOf widgets/ParcelDrafter/setting/Setting
        **/
       _createSymbolPicker: function (symbolNode, symbolType, geometryType, symbolChooserTitle) {
-        var objSymbol = {}, symbolChooserNode, params;
+        var objSymbol = {}, symbolChooserNode, params, rotationPointSymbolJson;
         //if symbol geometry exist
         if (geometryType) {
           objSymbol.type = utils.getSymbolTypeByGeometryType(geometryType);
-          //Backward compatibility for Rotation symbol, if not found in config use the point symbol
+          //Backward compatibility for Rotation symbol, if not found in config set the default
           if (symbolType === "startOrRotaionSymbol" && !this.config[symbolType]) {
-            this.config[symbolType] = this.config.pointSymbol;
+            rotationPointSymbolJson = {
+              "color": [136, 136, 136, 255],
+              "size": 11.25,
+              "angle": 0,
+              "xoffset": 0,
+              "yoffset": 0,
+              "type": "esriSMS",
+              "style": "esriSMSCircle",
+              "outline": {
+                "color": [29, 29, 53, 255],
+                "width": 0.75,
+                "type": "esriSLS",
+                "style": "esriSLSSolid"
+              }
+            };
+            this.config[symbolType] = rotationPointSymbolJson;
           }
           //Create symbol chooser based on symbol type.
           //ie. if symbol is for connection, boundary, parcel point or rotation

@@ -1,17 +1,17 @@
 {
   "startOrRotaionSymbol": {
     "color": [
-      0,
-      250,
-      0,
+      136,
+      136,
+      136,
       255
     ],
-    "size": 15,
+    "size": 11.25,
     "angle": 0,
     "xoffset": 0,
     "yoffset": 0,
     "type": "esriSMS",
-    "style": "esriSMSSquare",
+    "style": "esriSMSCircle",
     "outline": {
       "color": [
         29,
