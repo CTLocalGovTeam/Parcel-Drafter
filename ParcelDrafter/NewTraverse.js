@@ -727,11 +727,22 @@ define([
        * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
       setRotation: function (endPoint) {
-        var angle;
+        var angle, rotationPointIndex, startPoint;
+        //by default use the traverse's startpoint
+        startPoint = this.startPoint;
+        //use rotation point if it is available to calculate angle
+        if (this._rotationPointInfo && this._rotationPointInfo.rotationPoint) {
+          startPoint = this._rotationPointInfo.rotationPoint;
+        }
         //calculate angle value
-        angle = geometryUtils.getRotationAngleBetweenPoints(this.startPoint, endPoint);
+        angle = geometryUtils.getRotationAngleBetweenPoints(startPoint, endPoint);
         if (this._itemList.length > 0) {
-          angle -= this._itemList[0].BearingConversions.naDDRound;
+          rotationPointIndex = 0;
+          if (this._rotationPointInfo &&
+            this._rotationPointInfo.rotationPointIndex < this._itemList.length) {
+              rotationPointIndex = this._rotationPointInfo.rotationPointIndex;
+          }
+          angle -= this._itemList[rotationPointIndex].BearingConversions.naDDRound;
         }
         //if angle is 360 consider it as 0
         if (angle === 360) {
@@ -933,8 +944,13 @@ define([
           lang.hitch(this, function (scaleValue) {
             if (scaleValue !== this._scaleValue) {
               this._scaleValue = scaleValue;
-              if (this._itemList && this._itemList.length > 0) {
-                this.setStartPoint(this.startPoint);
+              //if rotaion point is updated use the updated rotation point and update the start point
+              if (this._rotationPointInfo && this._rotationPointInfo.rotationPoint) {
+                this._updateStartPointFromRotationPoint();
+              } else {
+                if (this._itemList && this._itemList.length > 0) {
+                  this.setStartPoint(this.startPoint);
+                }
               }
             }
           })));
@@ -1560,9 +1576,25 @@ define([
       * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
       _showRotationPoint: function () {
-        var rotationPointSymbol, rotaionPointGeom = this.startPoint;
+        var rotationPointSymbolJson, rotationPointSymbol, rotaionPointGeom = this.startPoint;
+        //for backward compatibility if startOrRotaionSymbol not found in config use default
         if (!this.config.startOrRotaionSymbol) {
-          rotationPointSymbol = jsonUtils.fromJson(this.config.pointSymbol);
+          rotationPointSymbolJson = {
+            "color": [136, 136, 136, 255],
+            "size": 11.25,
+            "angle": 0,
+            "xoffset": 0,
+            "yoffset": 0,
+            "type": "esriSMS",
+            "style": "esriSMSCircle",
+            "outline": {
+              "color": [29, 29, 53, 255],
+              "width": 0.75,
+              "type": "esriSLS",
+              "style": "esriSLSSolid"
+            }
+          };
+          rotationPointSymbol = jsonUtils.fromJson(rotationPointSymbolJson);
         } else {
           rotationPointSymbol = jsonUtils.fromJson(this.config.startOrRotaionSymbol);
         }
@@ -1625,19 +1657,29 @@ define([
         var rotationPointIndex = this._rotationPointInfo.rotationPointIndex;
         if (this._rotationAngle !== null) {
           for (var j = rotationPointIndex - 1; j >= 0; j--) {
-            var newEnd, arcInfo;
+            var newEnd, arcInfo, radius, chordLength;
             var value = this._itemList[j];
             var angle = Number(value.BearingConversions.naDD) + this._rotationAngle;
+            var distance = value.LengthConversions.meters;
+            //apply scale for distance
+            if (this._scaleValue) {
+              distance = distance * this._scaleValue;
+            }
             //apply south azimuth as we are going backward to take the start point
             angle = utils.getSouthAzimuthFromNorthAzimuth(angle);
             //if no radius then draw straight line else draw arcs
             if (value.Radius === "" || value.Radius === "0" || value.Radius === 0) {
               newEnd =
-                geometryUtils.getDestinationPoint(startForNext, angle,
-                  value.LengthConversions.meters);
+                geometryUtils.getDestinationPoint(startForNext, angle, distance);
             } else {
-              arcInfo = this.getArcInfo(startForNext, angle,
-                value.RadiusConversions.meters, value.ChordLengthConversions.meters);
+              radius = value.RadiusConversions.meters;
+              chordLength = value.ChordLengthConversions.meters;
+              //apply scale for radius and chordLength
+              if (this._scaleValue) {
+                radius = radius * this._scaleValue;
+                chordLength = chordLength * this._scaleValue;
+              }
+              arcInfo = this.getArcInfo(startForNext, angle, radius, chordLength);
               newEnd = arcInfo.endPoint;
             }
             //update the start for next line as current lines endPoint
@@ -2268,18 +2310,47 @@ define([
         var startForNext = new Point(0, 0, new SpatialReference(4326));
         var linesPathArray = [];
         array.forEach(this._itemList, lang.hitch(this, function (value) {
-          var i, newEnd, arcInfo, lineGeometry;
+          var i, newEnd, arcInfo, lineGeometry, bearing, distance, initBearing;
           //consider only boundary lines
           if (value.LineSymbol.type === this.config.BoundaryLineType) {
             //if no radius then draw straight line else draw arcs
             if (value.Radius === "" || value.Radius === "0" || value.Radius === 0) {
+              //if misclose is adjusted then use adjusted values to calculate area
+              //else use entered values
+              if (value.adjustedValues && this.adjustPoints) {
+                bearing = value.adjustedValues.adjustedBearing;
+                if (value.BearingConversions.qb3DDRound.charAt(0) === "S" ||
+                  value.adjustedValues.lat < 0) {
+                  bearing = value.adjustedValues.adjustedBearingNADD;
+                }
+                distance = value.adjustedValues.adjustedLength;
+              } else {
+                bearing = value.BearingConversions.naDD;
+                distance = value.LengthConversions.meters;
+              }
               newEnd =
-                geometryUtils.getDestinationPoint(startForNext,
-                  value.BearingConversions.naDD, value.LengthConversions.meters);
+                geometryUtils.getDestinationPoint(startForNext, bearing, distance);
               lineGeometry = geometryUtils.getLineBetweenPoints([startForNext, newEnd]);
             } else {
-              arcInfo = this.getArcInfo(startForNext, value.BearingConversions.naDD,
-                value.RadiusConversions.meters, value.ChordLengthConversions.meters);
+              //if misclose is adjusted then adjustPoints
+              if (value.adjustedValues && this.adjustPoints) {
+                initBearing = value.adjustedValues.adjustedBearing;
+                if (value.BearingConversions.qb3DDRound.charAt(0) === "S" ||
+                  value.adjustedValues.lat < 0) {
+                  initBearing = value.adjustedValues.adjustedBearingNADD;
+                }
+                distance = value.adjustedValues.adjustedLength;
+                //In case if -ve chordLength was entered the adjustments will change it to +ve,
+                //so multiply by -1 which will consider the distance as negative
+                if (value.ChordLengthConversions.meters < 0) {
+                  distance = distance * -1;
+                }
+              } else {
+                initBearing = value.BearingConversions.naDD;
+                distance = value.ChordLengthConversions.meters;
+              }
+              arcInfo = this.getArcInfo(startForNext, initBearing,
+                value.RadiusConversions.meters, distance);
               newEnd = arcInfo.endPoint;
               lineGeometry = geometryUtils.getLineBetweenPoints(arcInfo.arcGeometryPointsArray);
             }
