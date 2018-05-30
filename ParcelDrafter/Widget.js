@@ -836,15 +836,15 @@ define([
       _getNodeByName: function (panelName) {
         var node;
         switch (panelName) {
-        case "mainPage":
-          node = this.mainPageNode;
-          break;
-        case "traversePage":
-          node = this.traversePageNode;
-          break;
-        case "planSettingsPage":
-          node = this.planSettingsPageNode;
-          break;
+          case "mainPage":
+            node = this.mainPageNode;
+            break;
+          case "traversePage":
+            node = this.traversePageNode;
+            break;
+          case "planSettingsPage":
+            node = this.planSettingsPageNode;
+            break;
         }
         return node;
       }

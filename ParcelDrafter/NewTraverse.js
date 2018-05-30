@@ -740,7 +740,7 @@ define([
           rotationPointIndex = 0;
           if (this._rotationPointInfo &&
             this._rotationPointInfo.rotationPointIndex < this._itemList.length) {
-              rotationPointIndex = this._rotationPointInfo.rotationPointIndex;
+            rotationPointIndex = this._rotationPointInfo.rotationPointIndex;
           }
           angle -= this._itemList[rotationPointIndex].BearingConversions.naDDRound;
         }
