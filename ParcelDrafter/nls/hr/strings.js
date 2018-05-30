@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Nevaljana konfiguracija",
   "geometryServiceURLNotFoundMSG": "Nije moguće dohvatiti URL geometrijske usluge",
   "editTraverseButtonLabel": "Uredi prijelaz",
-  "mapTooltipForStartNewTraverse": "Č_Please select a point on map, or type below, to begin_________________ž",
+  "mapTooltipForStartNewTraverse": "Odaberite točku na karti ili je upišite u nastavku za početak",
   "mapTooltipForEditNewTraverse": "Odaberite parcelu za uređivanje",
   "mapTooltipForUpdateStartPoint": "Kliknite za ažuriranje početne točke",
   "mapTooltipForScreenDigitization": "Kliknite za dodavanje točke parcele",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Unesite valjano navedeno područje."
   },
   "xyInput": {
-    "explanation": "Č_In the spatial reference of your parcels layer_______________ž"
+    "explanation": "U prostornoj referenci sloja parcela"
   }
 });

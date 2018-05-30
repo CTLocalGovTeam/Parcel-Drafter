@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Ugyldig konfigurasjon",
   "geometryServiceURLNotFoundMSG": "Kan ikke hente URL for geometritjeneste",
   "editTraverseButtonLabel": "Rediger polygondrag",
-  "mapTooltipForStartNewTraverse": "å_Please select a point on map, or type below, to begin_________________ø",
+  "mapTooltipForStartNewTraverse": "Velg et punkt på kartet eller skriv nedenfor for å begynne",
   "mapTooltipForEditNewTraverse": "Velg en teig som skal redigeres",
   "mapTooltipForUpdateStartPoint": "Klikk for å oppdatere startpunkt",
   "mapTooltipForScreenDigitization": "Klikk for å legge til teigpunkt",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Angi et gyldig angitt område."
   },
   "xyInput": {
-    "explanation": "å_In the spatial reference of your parcels layer_______________ø"
+    "explanation": "I den romlige referansen for jordstykkelaget ditt"
   }
 });

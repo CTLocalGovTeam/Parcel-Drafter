@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Μη έγκυρη διαμόρφωση",
   "geometryServiceURLNotFoundMSG": "Αδύνατη η λήψη Geometry Service URL",
   "editTraverseButtonLabel": "Επεξεργασία διατομής",
-  "mapTooltipForStartNewTraverse": "Đ_Please select a point on map, or type below, to begin_________________ớ",
+  "mapTooltipForStartNewTraverse": "Επιλέξτε σημείο στο χάρτη ή τύπο παρακάτω για να ξεκινήσετε",
   "mapTooltipForEditNewTraverse": "Επιλέξτε αγροτεμάχιο για επεξεργασία",
   "mapTooltipForUpdateStartPoint": "Κάντε κλικ για ενημέρωση του σημείου έναρξης",
   "mapTooltipForScreenDigitization": "Κάντε κλικ για προσθήκη σημείου αγροτεμαχίου",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Εισαγάγετε έγκυρη περιοχή δήλωσης."
   },
   "xyInput": {
-    "explanation": "Đ_In the spatial reference of your parcels layer_______________ớ"
+    "explanation": "Στη χωρική αναφορά του θεματικού επιπέδου των γεωτεμαχίων σας"
   }
 });

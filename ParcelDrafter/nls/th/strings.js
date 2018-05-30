@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "การกำหนดค่าไม่ถูกต้อง",
   "geometryServiceURLNotFoundMSG": "ไม่สามารถรับ URL เซอร์วิสเรขาคณิต",
   "editTraverseButtonLabel": "แก้ไขการสำรวจ",
-  "mapTooltipForStartNewTraverse": "ก้_Please select a point on map, or type below, to begin_________________ษฺ",
+  "mapTooltipForStartNewTraverse": "โปรดเลือกจุดบนแผนที่หรือพิมพ์ด้านล่างเพื่อเริ่มต้น",
   "mapTooltipForEditNewTraverse": "โปรดเลือกข้อมูลที่ต้องการแก้ไข",
   "mapTooltipForUpdateStartPoint": "คลิกเพื่ออัพเดทจุดเริ่มต้น",
   "mapTooltipForScreenDigitization": "คลิกเพื่อเพิ่มจุดข้อมูล",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "โปรดระบุพื้นที่ที่ถูกต้อง"
   },
   "xyInput": {
-    "explanation": "ก้_In the spatial reference of your parcels layer_______________ษฺ"
+    "explanation": "ในการอ้างอิงเชิงพื้นที่ของชั้นแปลงที่ดินของคุณ"
   }
 });

@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Geçersiz Yapılandırma",
   "geometryServiceURLNotFoundMSG": "Geometri Servisi URL’si alınamıyor",
   "editTraverseButtonLabel": "Çapraz Çizgiyi Düzenle",
-  "mapTooltipForStartNewTraverse": "ı_Please select a point on map, or type below, to begin_________________İ",
+  "mapTooltipForStartNewTraverse": "Başlamak için haritada bir nokta seçin veya aşağıya girin",
   "mapTooltipForEditNewTraverse": "Düzenlenecek yapıyı seçin",
   "mapTooltipForUpdateStartPoint": "Başlangıç noktasını güncellemek için tıklayın",
   "mapTooltipForScreenDigitization": "Yapı noktası eklemek için tıklayın",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Geçerli belirtilen alan girin."
   },
   "xyInput": {
-    "explanation": "ı_In the spatial reference of your parcels layer_______________İ"
+    "explanation": "Parsel katmanınızın mekansal referansında"
   }
 });

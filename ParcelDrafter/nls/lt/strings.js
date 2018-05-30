@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Neteisinga konfigūracija",
   "geometryServiceURLNotFoundMSG": "Negalima gauti geometrijos paslaugos URL",
   "editTraverseButtonLabel": "Redaguoti pravažiavimą",
-  "mapTooltipForStartNewTraverse": "Į_Please select a point on map, or type below, to begin_________________š",
+  "mapTooltipForStartNewTraverse": "Norėdami pradėti pasirinkite tašką žemėlapyje arba įveskite žemiau",
   "mapTooltipForEditNewTraverse": "Pasirinkite sklypą, kurį norite redaguoti",
   "mapTooltipForUpdateStartPoint": "Paspauskite, kad atnaujintumėte pradžios tašką",
   "mapTooltipForScreenDigitization": "Paspauskite, kad pridėtumėte sklypo tašką",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Įveskite leistiną nustatytą plotą."
   },
   "xyInput": {
-    "explanation": "Į_In the spatial reference of your parcels layer_______________š"
+    "explanation": "Jūsų sklypų sluoksnio koordinačių sistemoje"
   }
 });

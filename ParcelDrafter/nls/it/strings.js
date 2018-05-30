@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Configurazione non valida",
   "geometryServiceURLNotFoundMSG": "Impossibile ottenere l'URL del servizio geometria",
   "editTraverseButtonLabel": "Modifica traversa",
-  "mapTooltipForStartNewTraverse": "é_Please select a point on map, or type below, to begin_________________È",
+  "mapTooltipForStartNewTraverse": "Selezionare un punto sulla mappa oppure digitare in basso per iniziare",
   "mapTooltipForEditNewTraverse": "Selezionare una parcella da modificare",
   "mapTooltipForUpdateStartPoint": "Fare clic per aggiornare il punto di inizio",
   "mapTooltipForScreenDigitization": "Fare clic per aggiornare la parcella di inizio",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Immettere una superficie indicata valida."
   },
   "xyInput": {
-    "explanation": "é_In the spatial reference of your parcels layer_______________È"
+    "explanation": "Nel riferimento spaziale del layer delle parcelle"
   }
 });

@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Nieprawidłowa konfiguracja",
   "geometryServiceURLNotFoundMSG": "Nie można uzyskać adresu URL usługi geometrii",
   "editTraverseButtonLabel": "Edytuj ciąg poligonowy",
-  "mapTooltipForStartNewTraverse": "ł_Please select a point on map, or type below, to begin_________________ą",
+  "mapTooltipForStartNewTraverse": "Wybierz punkt na mapie lub pisz poniżej, aby rozpocząć",
   "mapTooltipForEditNewTraverse": "Wybierz działkę do edycji",
   "mapTooltipForUpdateStartPoint": "Kliknij, aby zaktualizować punkt początkowy",
   "mapTooltipForScreenDigitization": "Kliknij, aby dodać punkt działki",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Wprowadź prawidłową zadeklarowaną powierzchnię."
   },
   "xyInput": {
-    "explanation": "ł_In the spatial reference of your parcels layer_______________ą"
+    "explanation": "W odniesieniu przestrzennym warstwy działek"
   }
 });

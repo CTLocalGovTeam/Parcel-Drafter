@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Недопустимая конфигурация.",
   "geometryServiceURLNotFoundMSG": "Не удалось получить доступ URL сервиса геометрии",
   "editTraverseButtonLabel": "Редактировать ход",
-  "mapTooltipForStartNewTraverse": "Ж_Please select a point on map, or type below, to begin_________________Я",
+  "mapTooltipForStartNewTraverse": "Выберите точку на карте или напечатайте ниже для начала",
   "mapTooltipForEditNewTraverse": "Выберите участок для редактирования",
   "mapTooltipForUpdateStartPoint": "Щелкните, чтобы обновить начальную точку",
   "mapTooltipForScreenDigitization": "Щелкните, чтобы добавить точку участка",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Введите допустимую начальную область"
   },
   "xyInput": {
-    "explanation": "Ж_In the spatial reference of your parcels layer_______________Я"
+    "explanation": "В пространственной привязке слоя участков"
   }
 });
