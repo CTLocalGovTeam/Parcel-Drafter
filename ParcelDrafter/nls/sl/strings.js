@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Neveljavna konfiguracija",
   "geometryServiceURLNotFoundMSG": "URL geometrijske storitve ni mogoče pridobiti",
   "editTraverseButtonLabel": "Uredi traverzo",
-  "mapTooltipForStartNewTraverse": "Š_Please select a point on map, or type below, to begin_________________č",
+  "mapTooltipForStartNewTraverse": "Izberite točko na karti ali vpišite spodaj za začetek",
   "mapTooltipForEditNewTraverse": "Izberite parcelo za urejanje",
   "mapTooltipForUpdateStartPoint": "Kliknite za posodobitev začetne točke",
   "mapTooltipForScreenDigitization": "Kliknite za dodajanje točke parcele",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Vnesite veljavno določeno površino."
   },
   "xyInput": {
-    "explanation": "Š_In the spatial reference of your parcels layer_______________č"
+    "explanation": "V koordinatnem sistemu vašega sloja parcel"
   }
 });

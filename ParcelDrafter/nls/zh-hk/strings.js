@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "設定無效",
   "geometryServiceURLNotFoundMSG": "無法取得幾何服務 URL",
   "editTraverseButtonLabel": "編輯行程",
-  "mapTooltipForStartNewTraverse": "試_Please select a point on map, or type below, to begin_________________驗",
+  "mapTooltipForStartNewTraverse": "請選擇地圖上的點或在下方輸入以開始執行",
   "mapTooltipForEditNewTraverse": "請選擇要編輯的宗地",
   "mapTooltipForUpdateStartPoint": "按一下以更新起點",
   "mapTooltipForScreenDigitization": "按一下以新增宗地點",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "請輸入有效的規定面積。"
   },
   "xyInput": {
-    "explanation": "試_In the spatial reference of your parcels layer_______________驗"
+    "explanation": "在宗地圖層的空間參考中"
   }
 });

@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Configuration non valide",
   "geometryServiceURLNotFoundMSG": "Impossible d'obtenir l'URL du service de géométrie",
   "editTraverseButtonLabel": "Modifier le parcours",
-  "mapTooltipForStartNewTraverse": "æ_Please select a point on map, or type below, to begin_________________Â",
+  "mapTooltipForStartNewTraverse": "Sélectionnez un point sur la carte ou tapez ci-dessous pour commencer",
   "mapTooltipForEditNewTraverse": "Sélectionnez une parcelle à modifier",
   "mapTooltipForUpdateStartPoint": "Cliquez pour mettre à jour le point de départ",
   "mapTooltipForScreenDigitization": "Cliquez pour ajouter un point de parcelle",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Entrez une zone indiquée valide."
   },
   "xyInput": {
-    "explanation": "æ_In the spatial reference of your parcels layer_______________Â"
+    "explanation": "Dans la référence spatiale de votre couche de parcelles"
   }
 });

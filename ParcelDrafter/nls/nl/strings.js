@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Ongeldige configuratie",
   "geometryServiceURLNotFoundMSG": "Kan geometrieservice-URL niet verkrijgen",
   "editTraverseButtonLabel": "Doorkruising bewerken",
-  "mapTooltipForStartNewTraverse": "Ĳ_Please select a point on map, or type below, to begin_________________ä",
+  "mapTooltipForStartNewTraverse": "Selecteer een punt op de kaart of typ hieronder om te starten",
   "mapTooltipForEditNewTraverse": "Selecteer een perceel om te bewerken",
   "mapTooltipForUpdateStartPoint": "Klik om startpunt bij te werken",
   "mapTooltipForScreenDigitization": "Klik om een perceelpunt toe te voegen",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Voer een geldig opgegeven gebied in."
   },
   "xyInput": {
-    "explanation": "Ĳ_In the spatial reference of your parcels layer_______________ä"
+    "explanation": "In de ruimtelijke referentie van uw perceellaag"
   }
 });

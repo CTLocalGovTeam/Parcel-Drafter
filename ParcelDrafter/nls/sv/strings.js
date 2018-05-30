@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Ogiltig konfiguration",
   "geometryServiceURLNotFoundMSG": "Det gick inte att hämta webbadress till geometritjänst",
   "editTraverseButtonLabel": "Redigera polygontåg",
-  "mapTooltipForStartNewTraverse": "Å_Please select a point on map, or type below, to begin_________________ö",
+  "mapTooltipForStartNewTraverse": "Börja genom att välja en punkt på kartan eller skriva nedan",
   "mapTooltipForEditNewTraverse": "Välj en byggnad att redigera",
   "mapTooltipForUpdateStartPoint": "Klicka för att uppdatera startpunkten",
   "mapTooltipForScreenDigitization": "Klicka för att lägga till en byggnadspunkt",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Ange ett giltigt angivet område."
   },
   "xyInput": {
-    "explanation": "Å_In the spatial reference of your parcels layer_______________ö"
+    "explanation": "I den geografiska referensen i ditt fastighetslager"
   }
 });

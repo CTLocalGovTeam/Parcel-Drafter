@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Ungültige Konfiguration",
   "geometryServiceURLNotFoundMSG": "URL des Geometrieservice kann nicht abgerufen werden",
   "editTraverseButtonLabel": "Polygonzug bearbeiten",
-  "mapTooltipForStartNewTraverse": "ä_Please select a point on map, or type below, to begin_________________Ü",
+  "mapTooltipForStartNewTraverse": "Wählen Sie einen Punkt auf der Karte oder einen Typ unten aus, um zu beginnen.",
   "mapTooltipForEditNewTraverse": "Wählen Sie ein zu bearbeitendes Flurstück aus.",
   "mapTooltipForUpdateStartPoint": "Zum Aktualisieren des Startpunkts klicken",
   "mapTooltipForScreenDigitization": "Zum Hinzufügen von Flurstückspunkt klicken",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Geben Sie eine gültige angegebene Fläche ein."
   },
   "xyInput": {
-    "explanation": "ä_In the spatial reference of your parcels layer_______________Ü"
+    "explanation": "Im Raumbezug des Flurstücks-Layers"
   }
 });

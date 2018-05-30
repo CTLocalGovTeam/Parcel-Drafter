@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Nederīga konfigurācija",
   "geometryServiceURLNotFoundMSG": "Nevar iegūt ģeometrijas servisa URL",
   "editTraverseButtonLabel": "Rediģēt traversu",
-  "mapTooltipForStartNewTraverse": "ķ_Please select a point on map, or type below, to begin_________________ū",
+  "mapTooltipForStartNewTraverse": "Lai sāktu, izvēlieties punktu kartē vai ierakstiet to tālāk",
   "mapTooltipForEditNewTraverse": "Izvēlieties zemes gabalu, ko rediģēt",
   "mapTooltipForUpdateStartPoint": "Noklikšķiniet, lai atjauninātu sākuma punktu",
   "mapTooltipForScreenDigitization": "Noklikšķiniet, lai pievienotu zemes gabala punktu",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Ievadiet derīgu norādīto platību."
   },
   "xyInput": {
-    "explanation": "ķ_In the spatial reference of your parcels layer_______________ū"
+    "explanation": "Zemes gabalu slāņa telpiskajā atskaitē"
   }
 });

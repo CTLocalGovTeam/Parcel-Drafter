@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "تكوين غير صحيح",
   "geometryServiceURLNotFoundMSG": "يتعذر الحصول على عنوان URL لخدمة الشكل الهندسي",
   "editTraverseButtonLabel": "تحرير العبور (الانتقال)",
-  "mapTooltipForStartNewTraverse": "بيت_Please select a point on map, or type below, to begin_________________لاحقة",
+  "mapTooltipForStartNewTraverse": "يرجى تحديد نقطة على الخريطة، أو اكتب أدناه، للبدء",
   "mapTooltipForEditNewTraverse": "الرجاء تحديد قطعة أرض لتحريرها",
   "mapTooltipForUpdateStartPoint": "انقر لتحديث نقطة البداية",
   "mapTooltipForScreenDigitization": "انقر لإضافة نقطة قطعة الأرض",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "الرجاء إدخال المنطقة المحددة الصحيحة."
   },
   "xyInput": {
-    "explanation": "بيت_In the spatial reference of your parcels layer_______________لاحقة"
+    "explanation": "في الإسناد المكاني لطبقة قطع الأرض"
   }
 });

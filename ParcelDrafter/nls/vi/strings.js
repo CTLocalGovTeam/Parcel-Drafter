@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Cấu hình không hợp lệ",
   "geometryServiceURLNotFoundMSG": "Không thể nhận URL Dịch vụ hình học",
   "editTraverseButtonLabel": "Chỉnh sửa đường đi qua",
-  "mapTooltipForStartNewTraverse": "Đ_Please select a point on map, or type below, to begin_________________ớ",
+  "mapTooltipForStartNewTraverse": "Vui lòng chọn một điểm trên bản đồ hoặc nhập thông tin bên dưới để bắt đầu",
   "mapTooltipForEditNewTraverse": "Vui lòng chọn một lô đất để chỉnh sửa",
   "mapTooltipForUpdateStartPoint": "Bấm để cập nhật điểm bắt đầu",
   "mapTooltipForScreenDigitization": "Bấm để thêm điểm lô đất",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Vui lòng nhập vùng được nêu hợp lệ."
   },
   "xyInput": {
-    "explanation": "Đ_In the spatial reference of your parcels layer_______________ớ"
+    "explanation": "Trong tham chiếu không gian tới lớp lô thửa của bạn"
   }
 });

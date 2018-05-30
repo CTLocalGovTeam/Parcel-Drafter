@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Configurare incorectă",
   "geometryServiceURLNotFoundMSG": "Imposibil de obţinut URL-ul serviciului de geometrie",
   "editTraverseButtonLabel": "Editare transversală",
-  "mapTooltipForStartNewTraverse": "Ă_Please select a point on map, or type below, to begin_________________ș",
+  "mapTooltipForStartNewTraverse": "Selectaţi un punct pe hartă, sau introduceţi mai jos, pentru a începe",
   "mapTooltipForEditNewTraverse": "Selectaţi o parcelă pentru a o edita",
   "mapTooltipForUpdateStartPoint": "Faceţi clic pentru a actualiza punctul de început",
   "mapTooltipForScreenDigitization": "Faceţi clic pentru a adăuga un punct la parcelă",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Introduceţi o suprafaţă declarată validă."
   },
   "xyInput": {
-    "explanation": "Ă_In the spatial reference of your parcels layer_______________ș"
+    "explanation": "În referinţa spaţială a stratului dvs. tematic de parcele"
   }
 });

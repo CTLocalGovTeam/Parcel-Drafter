@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "תצורה לא חוקית",
   "geometryServiceURLNotFoundMSG": "לא ניתן לקבל כתובת URL של שירות גיאומטריה",
   "editTraverseButtonLabel": "ערוך צלעון",
-  "mapTooltipForStartNewTraverse": "כן_Please select a point on map, or type below, to begin_________________ש",
+  "mapTooltipForStartNewTraverse": "בחר נקודה במפה או הקלד להלן כדי להתחיל",
   "mapTooltipForEditNewTraverse": "בחר חלקות כדי לערוך",
   "mapTooltipForUpdateStartPoint": "לחץ כדי לעדכן נקודת התחלה",
   "mapTooltipForScreenDigitization": "לחץ כדי להוסיף נקודת חלקות",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "הזן אזור מצוין חוקי."
   },
   "xyInput": {
-    "explanation": "כן_In the spatial reference of your parcels layer_______________ש"
+    "explanation": "בייחוס המרחבי של שכבת החלקות שלך"
   }
 });

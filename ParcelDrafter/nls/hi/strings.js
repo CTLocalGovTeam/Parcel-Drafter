@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "अमान्य कॉन्फ़िगरेशन",
   "geometryServiceURLNotFoundMSG": "ज्यामितीय सेवा URL पाने में सक्षम नहीं",
   "editTraverseButtonLabel": "ट्रावर्स संपादित करें",
-  "mapTooltipForStartNewTraverse": "आ_Please select a point on map, or type below, to begin_________________ज",
+  "mapTooltipForStartNewTraverse": "शुरू करने के लिए कृपया मानचित्र पर बिंदु चुनें या नीचे टाइप करें",
   "mapTooltipForEditNewTraverse": "संपादित करने के लिए कृपया किसी पार्सल का चयन करें",
   "mapTooltipForUpdateStartPoint": "शुरुआती पॉइंट को अपडेट करने के लिए क्लिक करें",
   "mapTooltipForScreenDigitization": "पार्सल पॉइंट जोड़ने के लिए क्लिक करें",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "कृपया घोषित क्षेत्र का दर्ज करें।"
   },
   "xyInput": {
-    "explanation": "आ_In the spatial reference of your parcels layer_______________ज"
+    "explanation": "अपनी पार्सल लेयर के स्थानिक संदर्भ में"
   }
 });

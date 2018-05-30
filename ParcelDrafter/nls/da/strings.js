@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Ugyldig konfiguration",
   "geometryServiceURLNotFoundMSG": "Kan ikke hente geometritjeneste-URL",
   "editTraverseButtonLabel": "Redigér travers",
-  "mapTooltipForStartNewTraverse": "ø_Please select a point on map, or type below, to begin_________________å",
+  "mapTooltipForStartNewTraverse": "Vælg et punkt på kortet, eller skriv nedenfor for at starte",
   "mapTooltipForEditNewTraverse": "Vælg en parcel, der skal redigeres",
   "mapTooltipForUpdateStartPoint": "Klik for at opdatere startpunkt",
   "mapTooltipForScreenDigitization": "Klik for at tilføje parcelpunkt",
@@ -60,7 +60,7 @@ define({
     "traverseMiscloseRatio": "Misclose-forhold",
     "traverseStatedArea": "Angivet område",
     "traverseCalculatedArea": "Beregnet område",
-    "addButtonTitle": "minutter",
+    "addButtonTitle": "Tilføj",
     "deleteButtonTitle": "Fjern"
   },
   "parcelTools": {
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Angiv et gyldigt angivet område."
   },
   "xyInput": {
-    "explanation": "ø_In the spatial reference of your parcels layer_______________å"
+    "explanation": "I den spatiale reference for dit parcellag"
   }
 });

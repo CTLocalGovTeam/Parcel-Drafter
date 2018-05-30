@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Configuração Inválida",
   "geometryServiceURLNotFoundMSG": "Não é possível obter o URL do Serviço de Geometria",
   "editTraverseButtonLabel": "Editar Travessia",
-  "mapTooltipForStartNewTraverse": "ã_Please select a point on map, or type below, to begin_________________Ç",
+  "mapTooltipForStartNewTraverse": "Por favor, selecione um ponto no mapa, ou digite abaixo, para iniciar",
   "mapTooltipForEditNewTraverse": "Por favor, selecione uma parcela para editar",
   "mapTooltipForUpdateStartPoint": "Clique para atualizar o ponto de partida",
   "mapTooltipForScreenDigitization": "Clique para adicionar ponto de parcela",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Por favor, introduza uma área estabelecida válida."
   },
   "xyInput": {
-    "explanation": "ã_In the spatial reference of your parcels layer_______________Ç"
+    "explanation": "Na referência espacial da sua camada de parcelas"
   }
 });

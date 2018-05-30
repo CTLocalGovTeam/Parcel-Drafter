@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Configuración no válida",
   "geometryServiceURLNotFoundMSG": "No se puede obtener la dirección URL del servicio de geometría",
   "editTraverseButtonLabel": "Editar trazado poligonal",
-  "mapTooltipForStartNewTraverse": "á_Please select a point on map, or type below, to begin_________________Ó",
+  "mapTooltipForStartNewTraverse": "Seleccione un punto en el mapa, o escriba debajo, para comenzar",
   "mapTooltipForEditNewTraverse": "Seleccione una parcela para editarla",
   "mapTooltipForUpdateStartPoint": "Haga clic para actualizar el punto de inicio",
   "mapTooltipForScreenDigitization": "Haga clic para agregar un punto de parcela",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Introduzca un área indicada válida."
   },
   "xyInput": {
-    "explanation": "á_In the spatial reference of your parcels layer_______________Ó"
+    "explanation": "En la referencia espacial de su capa de parcelas"
   }
 });

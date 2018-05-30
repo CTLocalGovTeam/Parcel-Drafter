@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "無効な構成",
   "geometryServiceURLNotFoundMSG": "ジオメトリ サービスの URL を取得できません",
   "editTraverseButtonLabel": "トラバースの編集",
-  "mapTooltipForStartNewTraverse": "須_Please select a point on map, or type below, to begin_________________鷗",
+  "mapTooltipForStartNewTraverse": "開始するマップ上のポイントまたは以下のタイプを選択してください",
   "mapTooltipForEditNewTraverse": "編集するパーセルを選択してください",
   "mapTooltipForUpdateStartPoint": "クリックして開始点を更新",
   "mapTooltipForScreenDigitization": "クリックしてパーセル ポイントを追加",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "有効な記載面積を入力してください。"
   },
   "xyInput": {
-    "explanation": "須_In the spatial reference of your parcels layer_______________鷗"
+    "explanation": "パーセル レイヤーの空間参照内"
   }
 });

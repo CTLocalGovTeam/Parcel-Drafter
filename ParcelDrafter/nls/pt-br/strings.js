@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Configuração Inválida",
   "geometryServiceURLNotFoundMSG": "Não é possível obter URL de Serviço de Geometria",
   "editTraverseButtonLabel": "Editar Transversal",
-  "mapTooltipForStartNewTraverse": "ã_Please select a point on map, or type below, to begin_________________Ç",
+  "mapTooltipForStartNewTraverse": "Selecione um ponto no mapa, ou digite abaixo, para iniciar",
   "mapTooltipForEditNewTraverse": "Selecione um lote para editar",
   "mapTooltipForUpdateStartPoint": "Clique para atualizar ponto inicial",
   "mapTooltipForScreenDigitization": "Clique para adicionar ponto de lotes",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Insira área declarada válida."
   },
   "xyInput": {
-    "explanation": "ã_In the spatial reference of your parcels layer_______________Ç"
+    "explanation": "Na referência espacial da sua camada de lotes"
   }
 });

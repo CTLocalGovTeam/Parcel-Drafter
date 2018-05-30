@@ -1,5 +1,5 @@
 ///////////////////////////////////////////////////////////////////////////
-// Copyright © 2016 Esri. All Rights Reserved.
+// Copyright © 2014 - 2018 Esri. All Rights Reserved.
 //
 // Licensed under the Apache License Version 2.0 (the 'License');
 // you may not use this file except in compliance with the License.
@@ -19,7 +19,7 @@ define({
   "invalidConfigMsg": "Μη έγκυρη διαμόρφωση",
   "geometryServiceURLNotFoundMSG": "Αδύνατη η λήψη Geometry Service URL",
   "editTraverseButtonLabel": "Επεξεργασία διατομής",
-  "mapTooltipForStartNewTraverse": "Đ_Please select a point on map, or type below, to begin_________________ớ",
+  "mapTooltipForStartNewTraverse": "Επιλέξτε σημείο στο χάρτη ή τύπο παρακάτω για να ξεκινήσετε",
   "mapTooltipForEditNewTraverse": "Επιλέξτε αγροτεμάχιο για επεξεργασία",
   "mapTooltipForUpdateStartPoint": "Κάντε κλικ για ενημέρωση του σημείου έναρξης",
   "mapTooltipForScreenDigitization": "Κάντε κλικ για προσθήκη σημείου αγροτεμαχίου",
@@ -97,6 +97,6 @@ define({
     "enterValidStatedAreaNameMessage": "Εισαγάγετε έγκυρη περιοχή δήλωσης."
   },
   "xyInput": {
-    "explanation": "Đ_In the spatial reference of your parcels layer_______________ớ"
+    "explanation": "Στη χωρική αναφορά του θεματικού επιπέδου των γεωτεμαχίων σας"
   }
 });
