@@ -62,16 +62,16 @@ define({
     "boundaryLineLabel": "Razmejitvena linija"
   },
   "closureSetting": {
-    "snappingLayerLabel": "Privlačnost slojev",
+    "snappingLayerLabel": "Magnetenje slojev",
     "snappingBtnLabel": "Nastavi",
-    "snappingLayerHintText": "Namig: Izberi sloje, na katere se bodo privlačile linije parcel.",
+    "snappingLayerHintText": "Namig: Izberi sloje, na katere se bodo magnetile linije parcel.",
     "miscloseDistanceLabel": "Razdalja odstopanja",
     "miscloseDistanceHintText": "Namig: Določite razdaljo odstopanja in njene enote.",
     "miscloseRatioLabel": "Razmerje odstopanja",
     "miscloseRatioHintText": "Namig: Določite razmerje odstopanja.",
-    "snappingToleranceLabel": "Doseg privlačnosti",
+    "snappingToleranceLabel": "Doseg magnetenja",
     "pixelLabel": "Piksli",
-    "snappingToleranceHintText": "Namig: Določite doseg privlačnosti.",
+    "snappingToleranceHintText": "Namig: Določite doseg magnetenja.",
     "selectLayerLabel": "Izberi sloj"
   },
   "errorMsg": {
@@ -94,7 +94,7 @@ define({
     "invalidPolylineLayer": "Izberite veljaven polilinijski sloj parcele",
     "invalidPolygonLayer": "Izberite veljaven poligonski sloj parcele",
     "invalidMiscloseDistance": "Vnesite veljavno razdaljo odstopanja",
-    "invalidSnappingTolerance": "Vnesite veljaven doseg privlačnosti",
+    "invalidSnappingTolerance": "Vnesite veljaven doseg magnetenja",
     "invalidMiscloseRatio": "Vnesite veljavno razmerje odstopanja",
     "selectDistinctLineTypes": "Izberite razlikovalno vrednost za vsak tip linije",
     "invalidConnectionLineType": "Neveljavna vrednost povezovalne linije",
