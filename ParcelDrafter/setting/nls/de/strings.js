@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Linientyp",
     "parcelPointSymbolLabel": "Flurstück-Punktsymbol",
     "parcelPointSymbolHintText": "Hinweis: Wird verwendet, um Punktsymbole für den Linienursprung anzuzeigen.",
+    "startOrRotationSymbolLabel": "ä_Start and Rotate Point Symbol__________Ü",
+    "startOrRotationSymbolHintText": "ä_Hint: Used to display start and rotate point symbol_________________Ü.",
     "symbolPickerPreviewText": "Vorschau",
     "selectLineLayerLabel": "Linien-Layer auswählen"
   },

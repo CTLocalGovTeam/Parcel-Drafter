@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Selecteer een perceel om te bewerken",
   "mapTooltipForUpdateStartPoint": "Klik om startpunt bij te werken",
   "mapTooltipForScreenDigitization": "Klik om een perceelpunt toe te voegen",
+  "mapTooltipForUpdatingRotaionPoint": "Ĳ_Click to update rotation point__________ä",
   "mapTooltipForRotate": "Sleep om te draaien",
   "mapTooltipForScale": "Sleep om te schalen",
   "backButtonTooltip": "Terug",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Raster uitvouwen",
     "collapseGridTooltipText": "Raster samenvouwen",
     "zoomToLocationTooltipText": "Inzoomen op locatie",
-    "onScreenDigitizationTooltipText": "Digitaliseren"
+    "onScreenDigitizationTooltipText": "Digitaliseren",
+    "updateRotationPointTooltipText": "Ĳ_Update rotation point_______ä"
   },
   "traverseSettings": {
     "bearingLabel": "Richting",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Kan perceellijnen niet opslaan.",
     "unableToUpdateParcelLines": "Kan perceellijnen niet bijwerken.",
     "parcelSavedSuccessMessage": "Perceel is succesvol opgeslagen.",
+    "parcelDeletedSuccessMessage": "Ĳ_Parcel deleted successfully_________ä.",
+    "parcelDeleteErrorMessage": "Ĳ_Error in deleteing parcel_________ä.",
     "enterValidParcelNameMessage": "Voer een geldige perceelnaam in.",
     "enterValidPlanNameMessage": "Voer een geldige plannaam in.",
     "enterValidDocumentTypeMessage": "Ongeldig documenttype.",

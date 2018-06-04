@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Linijos tipas",
     "parcelPointSymbolLabel": "Sklypo taško simbolis",
     "parcelPointSymbolHintText": "Pastaba: naudojama linijinės kilmės taško simboliui rodyti.",
+    "startOrRotationSymbolLabel": "Į_Start and Rotate Point Symbol__________š",
+    "startOrRotationSymbolHintText": "Į_Hint: Used to display start and rotate point symbol_________________š.",
     "symbolPickerPreviewText": "Peržiūra",
     "selectLineLayerLabel": "Pasirinkti linijinį sluoksnį"
   },

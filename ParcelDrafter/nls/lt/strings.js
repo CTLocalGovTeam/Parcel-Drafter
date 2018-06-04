@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Pasirinkite sklypą, kurį norite redaguoti",
   "mapTooltipForUpdateStartPoint": "Paspauskite, kad atnaujintumėte pradžios tašką",
   "mapTooltipForScreenDigitization": "Paspauskite, kad pridėtumėte sklypo tašką",
+  "mapTooltipForUpdatingRotaionPoint": "Į_Click to update rotation point__________š",
   "mapTooltipForRotate": "Vilkite, kad pasuktumėte",
   "mapTooltipForScale": "Vilkite, kad pakeistumėte mastelį",
   "backButtonTooltip": "Atgal",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Išplėsti tinklelį",
     "collapseGridTooltipText": "Sutraukti tinklelį",
     "zoomToLocationTooltipText": "Pritraukti vietą",
-    "onScreenDigitizationTooltipText": "Skaitmenizuoti"
+    "onScreenDigitizationTooltipText": "Skaitmenizuoti",
+    "updateRotationPointTooltipText": "Į_Update rotation point_______š"
   },
   "traverseSettings": {
     "bearingLabel": "Kryptis",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Negalima įrašyti sklypo linijų.",
     "unableToUpdateParcelLines": "Negalima atnaujinti sklypo linijų.",
     "parcelSavedSuccessMessage": "Sklypas įrašytas sėkmingai.",
+    "parcelDeletedSuccessMessage": "Į_Parcel deleted successfully_________š.",
+    "parcelDeleteErrorMessage": "Į_Error in deleteing parcel_________š.",
     "enterValidParcelNameMessage": "Įveskite leistiną sklypo pavadinimą.",
     "enterValidPlanNameMessage": "Įveskite leistiną plano pavadinimą.",
     "enterValidDocumentTypeMessage": "Neleistinas dokumento tipas.",

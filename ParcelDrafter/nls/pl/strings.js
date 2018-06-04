@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Wybierz działkę do edycji",
   "mapTooltipForUpdateStartPoint": "Kliknij, aby zaktualizować punkt początkowy",
   "mapTooltipForScreenDigitization": "Kliknij, aby dodać punkt działki",
+  "mapTooltipForUpdatingRotaionPoint": "ł_Click to update rotation point__________ą",
   "mapTooltipForRotate": "Drag to rotate",
   "mapTooltipForScale": "Przeciągnij, aby zmienić skalę",
   "backButtonTooltip": "Powrót",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Rozwiń siatkę",
     "collapseGridTooltipText": "Zwiń siatkę",
     "zoomToLocationTooltipText": "Powiększ do lokalizacji",
-    "onScreenDigitizationTooltipText": "Digitalizuj"
+    "onScreenDigitizationTooltipText": "Digitalizuj",
+    "updateRotationPointTooltipText": "ł_Update rotation point_______ą"
   },
   "traverseSettings": {
     "bearingLabel": "Kąt kierunkowy",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Nie można zapisać linii działki.",
     "unableToUpdateParcelLines": "Nie można zaktualizować linii działki.",
     "parcelSavedSuccessMessage": "Pomyślnie zapisano działkę.",
+    "parcelDeletedSuccessMessage": "ł_Parcel deleted successfully_________ą.",
+    "parcelDeleteErrorMessage": "ł_Error in deleteing parcel_________ą.",
     "enterValidParcelNameMessage": "Wprowadź prawidłową nazwę działki.",
     "enterValidPlanNameMessage": "Wprowadź prawidłową nazwę planu.",
     "enterValidDocumentTypeMessage": "Nieprawidłowy typ dokumentu.",

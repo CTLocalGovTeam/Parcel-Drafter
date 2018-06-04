@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "請選擇要編輯的宗地",
   "mapTooltipForUpdateStartPoint": "按一下以更新起點",
   "mapTooltipForScreenDigitization": "按一下以新增宗地點",
+  "mapTooltipForUpdatingRotaionPoint": "試_Click to update rotation point__________驗",
   "mapTooltipForRotate": "拖曳旋轉",
   "mapTooltipForScale": "拖曳以調整",
   "backButtonTooltip": "返回",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "展開方格",
     "collapseGridTooltipText": "收合方格",
     "zoomToLocationTooltipText": "縮放至位置",
-    "onScreenDigitizationTooltipText": "數字化"
+    "onScreenDigitizationTooltipText": "數字化",
+    "updateRotationPointTooltipText": "試_Update rotation point_______驗"
   },
   "traverseSettings": {
     "bearingLabel": "方位",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "無法儲存宗地線。",
     "unableToUpdateParcelLines": "無法更新宗地線。",
     "parcelSavedSuccessMessage": "已成功儲存宗地。",
+    "parcelDeletedSuccessMessage": "試_Parcel deleted successfully_________驗.",
+    "parcelDeleteErrorMessage": "試_Error in deleteing parcel_________驗.",
     "enterValidParcelNameMessage": "請輸入有效的宗地名稱。",
     "enterValidPlanNameMessage": "請輸入有效的計畫名稱。",
     "enterValidDocumentTypeMessage": "文件類型無效。",

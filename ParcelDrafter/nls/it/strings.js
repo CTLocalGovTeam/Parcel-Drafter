@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Selezionare una parcella da modificare",
   "mapTooltipForUpdateStartPoint": "Fare clic per aggiornare il punto di inizio",
   "mapTooltipForScreenDigitization": "Fare clic per aggiornare la parcella di inizio",
+  "mapTooltipForUpdatingRotaionPoint": "é_Click to update rotation point__________È",
   "mapTooltipForRotate": "Trascina per ruotare",
   "mapTooltipForScale": "Trascina per eseguire la scala",
   "backButtonTooltip": "Indietro",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Espandi griglia",
     "collapseGridTooltipText": "Chiudi griglia",
     "zoomToLocationTooltipText": "Zoom su posizione",
-    "onScreenDigitizationTooltipText": "Digitalizza"
+    "onScreenDigitizationTooltipText": "Digitalizza",
+    "updateRotationPointTooltipText": "é_Update rotation point_______È"
   },
   "traverseSettings": {
     "bearingLabel": "Comportamento",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Impossibile salvare le linee parcella.",
     "unableToUpdateParcelLines": "Impossibile aggiornare le linee parcella.",
     "parcelSavedSuccessMessage": "Salvataggio parcella riuscito.",
+    "parcelDeletedSuccessMessage": "é_Parcel deleted successfully_________È.",
+    "parcelDeleteErrorMessage": "é_Error in deleteing parcel_________È.",
     "enterValidParcelNameMessage": "Immettere un nome parcella valido.",
     "enterValidPlanNameMessage": "Immettere un nome piano valido.",
     "enterValidDocumentTypeMessage": "Tipo di documento non valido.",

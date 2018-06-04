@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Lijntype",
     "parcelPointSymbolLabel": "Perceelpuntsymbool",
     "parcelPointSymbolHintText": "Hint: Wordt gebruikt om puntsymbool weer te geven voor de oorsprong van de lijn.",
+    "startOrRotationSymbolLabel": "Ĳ_Start and Rotate Point Symbol__________ä",
+    "startOrRotationSymbolHintText": "Ĳ_Hint: Used to display start and rotate point symbol_________________ä.",
     "symbolPickerPreviewText": "Voorbeeld",
     "selectLineLayerLabel": "Selecteer lijnlaag"
   },

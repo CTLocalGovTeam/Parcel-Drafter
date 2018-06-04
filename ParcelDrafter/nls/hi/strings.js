@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "संपादित करने के लिए कृपया किसी पार्सल का चयन करें",
   "mapTooltipForUpdateStartPoint": "शुरुआती पॉइंट को अपडेट करने के लिए क्लिक करें",
   "mapTooltipForScreenDigitization": "पार्सल पॉइंट जोड़ने के लिए क्लिक करें",
+  "mapTooltipForUpdatingRotaionPoint": "आ_Click to update rotation point__________ज",
   "mapTooltipForRotate": "घुमाने के लिए ड्रैग करें",
   "mapTooltipForScale": "स्केल करने के लिए ड्रैग करें",
   "backButtonTooltip": "पीछे जाएँ",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "ग्रिड को विस्तारित करें",
     "collapseGridTooltipText": "ग्रिड को संकुचित करें",
     "zoomToLocationTooltipText": "स्थान को ज़ूम करें",
-    "onScreenDigitizationTooltipText": "डिज़िटाइज़ करें"
+    "onScreenDigitizationTooltipText": "डिज़िटाइज़ करें",
+    "updateRotationPointTooltipText": "आ_Update rotation point_______ज"
   },
   "traverseSettings": {
     "bearingLabel": "बियरिंग",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "पार्सल की रेखाएं सुरक्षित करने में असमर्थ।",
     "unableToUpdateParcelLines": "पार्सल की रेखाओं को सुधारने में असमर्थ।",
     "parcelSavedSuccessMessage": "पार्सल सफलतापूर्वक सुरक्षित हो गया है।",
+    "parcelDeletedSuccessMessage": "आ_Parcel deleted successfully_________ज.",
+    "parcelDeleteErrorMessage": "आ_Error in deleteing parcel_________ज.",
     "enterValidParcelNameMessage": "कृपया वैध पार्सल नाम दर्ज करें।",
     "enterValidPlanNameMessage": "कृपया वैध योजना नाम दर्ज करें।",
     "enterValidDocumentTypeMessage": "दस्तावेजों का प्रकार अवैध है।",

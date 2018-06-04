@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Выберите участок для редактирования",
   "mapTooltipForUpdateStartPoint": "Щелкните, чтобы обновить начальную точку",
   "mapTooltipForScreenDigitization": "Щелкните, чтобы добавить точку участка",
+  "mapTooltipForUpdatingRotaionPoint": "Ж_Click to update rotation point__________Я",
   "mapTooltipForRotate": "Перетащите, чтобы повернуть",
   "mapTooltipForScale": "Потянуть к шкале",
   "backButtonTooltip": "Назад",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Развернуть сетку",
     "collapseGridTooltipText": "Свернуть сетку",
     "zoomToLocationTooltipText": "Приблизить к местоположению",
-    "onScreenDigitizationTooltipText": "Оцифровать"
+    "onScreenDigitizationTooltipText": "Оцифровать",
+    "updateRotationPointTooltipText": "Ж_Update rotation point_______Я"
   },
   "traverseSettings": {
     "bearingLabel": "Дирекционный угол",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Не удалось сохранить линии участка.",
     "unableToUpdateParcelLines": "Не удалось обновить линии участка.",
     "parcelSavedSuccessMessage": "Участок сохранен успешно.",
+    "parcelDeletedSuccessMessage": "Ж_Parcel deleted successfully_________Я.",
+    "parcelDeleteErrorMessage": "Ж_Error in deleteing parcel_________Я.",
     "enterValidParcelNameMessage": "Введите допустимое имя участка.",
     "enterValidPlanNameMessage": "Введите корректное имя плана.",
     "enterValidDocumentTypeMessage": "Недопустимый тип документа.",

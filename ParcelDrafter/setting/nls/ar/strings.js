@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "نوع الخط",
     "parcelPointSymbolLabel": "رمز نقطة قطعة الأرض",
     "parcelPointSymbolHintText": "لمحة: يستخدم لعرض رمز النقطة لأصل الخط.",
+    "startOrRotationSymbolLabel": "بيت_Start and Rotate Point Symbol__________لاحقة",
+    "startOrRotationSymbolHintText": "بيت_Hint: Used to display start and rotate point symbol_________________لاحقة.",
     "symbolPickerPreviewText": "معاينة",
     "selectLineLayerLabel": "حدد طبقة الخط"
   },

@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "الرجاء تحديد قطعة أرض لتحريرها",
   "mapTooltipForUpdateStartPoint": "انقر لتحديث نقطة البداية",
   "mapTooltipForScreenDigitization": "انقر لإضافة نقطة قطعة الأرض",
+  "mapTooltipForUpdatingRotaionPoint": "بيت_Click to update rotation point__________لاحقة",
   "mapTooltipForRotate": "اسحب للاستدارة",
   "mapTooltipForScale": "اسحب إلى مقياس الرسم",
   "backButtonTooltip": "الخلف",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "توسيع الشبكة",
     "collapseGridTooltipText": "طي الشبكة",
     "zoomToLocationTooltipText": "تكبير/ تصغير الموقع",
-    "onScreenDigitizationTooltipText": "ترقيم"
+    "onScreenDigitizationTooltipText": "ترقيم",
+    "updateRotationPointTooltipText": "بيت_Update rotation point_______لاحقة"
   },
   "traverseSettings": {
     "bearingLabel": "زاوية بعد",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "يتعذر حفظ خطوط قطعة الأرض.",
     "unableToUpdateParcelLines": "يتعذر تحديث خطوط قطعة الأرض.",
     "parcelSavedSuccessMessage": "تم حفظ قطعة الأرض بنجاح.",
+    "parcelDeletedSuccessMessage": "بيت_Parcel deleted successfully_________لاحقة.",
+    "parcelDeleteErrorMessage": "بيت_Error in deleteing parcel_________لاحقة.",
     "enterValidParcelNameMessage": "الرجاء إدخال اسم قطعة أرض صحيح.",
     "enterValidPlanNameMessage": "الرجاء إدخال اسم خطة صحيح.",
     "enterValidDocumentTypeMessage": "نوع مستند غير صحيح.",

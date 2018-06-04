@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Velg en teig som skal redigeres",
   "mapTooltipForUpdateStartPoint": "Klikk for å oppdatere startpunkt",
   "mapTooltipForScreenDigitization": "Klikk for å legge til teigpunkt",
+  "mapTooltipForUpdatingRotaionPoint": "å_Click to update rotation point__________ø",
   "mapTooltipForRotate": "Dra for å rotere",
   "mapTooltipForScale": "Dra for å skalere",
   "backButtonTooltip": "TILBAKE",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Vis rutenett",
     "collapseGridTooltipText": "Skjul rutenett",
     "zoomToLocationTooltipText": "Zoom til lokasjon",
-    "onScreenDigitizationTooltipText": "Digitaliser"
+    "onScreenDigitizationTooltipText": "Digitaliser",
+    "updateRotationPointTooltipText": "å_Update rotation point_______ø"
   },
   "traverseSettings": {
     "bearingLabel": "Peiling",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Kan ikke lagre teiglinjer.",
     "unableToUpdateParcelLines": "Kan ikke oppdatere teiglinjer.",
     "parcelSavedSuccessMessage": "Lagring av teig var vellykket.",
+    "parcelDeletedSuccessMessage": "å_Parcel deleted successfully_________ø.",
+    "parcelDeleteErrorMessage": "å_Error in deleteing parcel_________ø.",
     "enterValidParcelNameMessage": "Angi et gyldig teignavn.",
     "enterValidPlanNameMessage": "Angi et gyldig plannavn.",
     "enterValidDocumentTypeMessage": "Ugyldig dokumenttype",

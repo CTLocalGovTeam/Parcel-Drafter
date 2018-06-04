@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Selectaţi o parcelă pentru a o edita",
   "mapTooltipForUpdateStartPoint": "Faceţi clic pentru a actualiza punctul de început",
   "mapTooltipForScreenDigitization": "Faceţi clic pentru a adăuga un punct la parcelă",
+  "mapTooltipForUpdatingRotaionPoint": "Ă_Click to update rotation point__________ș",
   "mapTooltipForRotate": "Tragere pentru rotire",
   "mapTooltipForScale": "Trageţi pentru a scala",
   "backButtonTooltip": "Înapoi",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Extindere grilă",
     "collapseGridTooltipText": "Restrângere grilă",
     "zoomToLocationTooltipText": "Zoom la locaţie",
-    "onScreenDigitizationTooltipText": "Digitalizare"
+    "onScreenDigitizationTooltipText": "Digitalizare",
+    "updateRotationPointTooltipText": "Ă_Update rotation point_______ș"
   },
   "traverseSettings": {
     "bearingLabel": "Azimut",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Imposibil de salvat liniile parcelei.",
     "unableToUpdateParcelLines": "Imposibil de actualizat liniile parcelei.",
     "parcelSavedSuccessMessage": "Parcelă salvată cu succes.",
+    "parcelDeletedSuccessMessage": "Ă_Parcel deleted successfully_________ș.",
+    "parcelDeleteErrorMessage": "Ă_Error in deleteing parcel_________ș.",
     "enterValidParcelNameMessage": "Introduceţi un nume de parcelă valid.",
     "enterValidPlanNameMessage": "Introduceţi un nume de plan valid.",
     "enterValidDocumentTypeMessage": "Tip document nevalid.",

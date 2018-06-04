@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Tipo linea",
     "parcelPointSymbolLabel": "Simbolo di punto parcella",
     "parcelPointSymbolHintText": "Suggerimento: impiegarlo per mostrare il simbolo di punto per l'origine della linea.",
+    "startOrRotationSymbolLabel": "é_Start and Rotate Point Symbol__________È",
+    "startOrRotationSymbolHintText": "é_Hint: Used to display start and rotate point symbol_________________È.",
     "symbolPickerPreviewText": "Anteprima",
     "selectLineLayerLabel": "Seleziona layer linea"
   },

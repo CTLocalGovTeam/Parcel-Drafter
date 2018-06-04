@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "בחר חלקות כדי לערוך",
   "mapTooltipForUpdateStartPoint": "לחץ כדי לעדכן נקודת התחלה",
   "mapTooltipForScreenDigitization": "לחץ כדי להוסיף נקודת חלקות",
+  "mapTooltipForUpdatingRotaionPoint": "כן_Click to update rotation point__________ש",
   "mapTooltipForRotate": "גרור כדי לסובב",
   "mapTooltipForScale": "גרור כדי לשנות קנה מידה",
   "backButtonTooltip": "חזור",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "הרחב גריד",
     "collapseGridTooltipText": "כווץ גריד",
     "zoomToLocationTooltipText": "התמקד במיקום",
-    "onScreenDigitizationTooltipText": "בצע דיגיטציה"
+    "onScreenDigitizationTooltipText": "בצע דיגיטציה",
+    "updateRotationPointTooltipText": "כן_Update rotation point_______ש"
   },
   "traverseSettings": {
     "bearingLabel": "כיוון",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "לא ניתן לשמור קווי חלקות.",
     "unableToUpdateParcelLines": "לא ניתן לעדכן קווי חלקות.",
     "parcelSavedSuccessMessage": "החלקות נשמרו בהצלחה.",
+    "parcelDeletedSuccessMessage": "כן_Parcel deleted successfully_________ש.",
+    "parcelDeleteErrorMessage": "כן_Error in deleteing parcel_________ש.",
     "enterValidParcelNameMessage": "הזן שם חלקות חוקי.",
     "enterValidPlanNameMessage": "הזן שם תוכנית חוקי.",
     "enterValidDocumentTypeMessage": "סוג מסמך לא חוקי.",

@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "라인 유형",
     "parcelPointSymbolLabel": "필지 포인트 심볼",
     "parcelPointSymbolHintText": "힌트: 라인 원점의 포인트 심볼을 표시하는 데 사용됩니다.",
+    "startOrRotationSymbolLabel": "한_Start and Rotate Point Symbol__________빠",
+    "startOrRotationSymbolHintText": "한_Hint: Used to display start and rotate point symbol_________________빠.",
     "symbolPickerPreviewText": "미리 보기",
     "selectLineLayerLabel": "라인 레이어 선택"
   },

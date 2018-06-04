@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Wählen Sie ein zu bearbeitendes Flurstück aus.",
   "mapTooltipForUpdateStartPoint": "Zum Aktualisieren des Startpunkts klicken",
   "mapTooltipForScreenDigitization": "Zum Hinzufügen von Flurstückspunkt klicken",
+  "mapTooltipForUpdatingRotaionPoint": "ä_Click to update rotation point__________Ü",
   "mapTooltipForRotate": "Zum Drehen ziehen",
   "mapTooltipForScale": "Zum Skalieren ziehen",
   "backButtonTooltip": "Zurück",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Gitternetz erweitern",
     "collapseGridTooltipText": "Gitternetz reduzieren",
     "zoomToLocationTooltipText": "Auf Position zoomen",
-    "onScreenDigitizationTooltipText": "Digitalisieren"
+    "onScreenDigitizationTooltipText": "Digitalisieren",
+    "updateRotationPointTooltipText": "ä_Update rotation point_______Ü"
   },
   "traverseSettings": {
     "bearingLabel": "Peilung",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Flurstückslinien können nicht gespeichert werden.",
     "unableToUpdateParcelLines": "Flurstückslinien können nicht aktualisiert werden.",
     "parcelSavedSuccessMessage": "Flurstück erfolgreich gespeichert.",
+    "parcelDeletedSuccessMessage": "ä_Parcel deleted successfully_________Ü.",
+    "parcelDeleteErrorMessage": "ä_Error in deleteing parcel_________Ü.",
     "enterValidParcelNameMessage": "Geben Sie einen gültigen Flurstücksnamen ein.",
     "enterValidPlanNameMessage": "Geben Sie einen gültigen Plannamen ein.",
     "enterValidDocumentTypeMessage": "Ungültiger Dokumenttyp",

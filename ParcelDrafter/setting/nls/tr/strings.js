@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Çizgi Türü",
     "parcelPointSymbolLabel": "Yapı Noktası Sembolü",
     "parcelPointSymbolHintText": "İpucu: Çizginin başlangıç noktası için nokta sembolünü görüntülemek için kullanılır.",
+    "startOrRotationSymbolLabel": "ı_Start and Rotate Point Symbol__________İ",
+    "startOrRotationSymbolHintText": "ı_Hint: Used to display start and rotate point symbol_________________İ.",
     "symbolPickerPreviewText": "Önizleme",
     "selectLineLayerLabel": "Çizgi katmanı seçin"
   },

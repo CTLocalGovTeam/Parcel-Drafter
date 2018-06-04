@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Loại Đường",
     "parcelPointSymbolLabel": "Ký hiệu điểm lô đất",
     "parcelPointSymbolHintText": "Gợi ý: Được sử dụng để hiển thị ký hiệu điểm cho điểm đầu của đường thẳng.",
+    "startOrRotationSymbolLabel": "Đ_Start and Rotate Point Symbol__________ớ",
+    "startOrRotationSymbolHintText": "Đ_Hint: Used to display start and rotate point symbol_________________ớ.",
     "symbolPickerPreviewText": "Xem trước",
     "selectLineLayerLabel": "Chọn lớp đường thẳng"
   },

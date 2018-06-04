@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Selecione um lote para editar",
   "mapTooltipForUpdateStartPoint": "Clique para atualizar ponto inicial",
   "mapTooltipForScreenDigitization": "Clique para adicionar ponto de lotes",
+  "mapTooltipForUpdatingRotaionPoint": "ã_Click to update rotation point__________Ç",
   "mapTooltipForRotate": "Arraste para rotacionar",
   "mapTooltipForScale": "Arraste para dimensionar",
   "backButtonTooltip": "Voltar",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Expandir grade",
     "collapseGridTooltipText": "Recolher grade",
     "zoomToLocationTooltipText": "Zoom na localização",
-    "onScreenDigitizationTooltipText": "Digitalizar"
+    "onScreenDigitizationTooltipText": "Digitalizar",
+    "updateRotationPointTooltipText": "ã_Update rotation point_______Ç"
   },
   "traverseSettings": {
     "bearingLabel": "Direção",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Não é possível salvar linhas de lotes.",
     "unableToUpdateParcelLines": "Não é possível atualizar linhas de lotes.",
     "parcelSavedSuccessMessage": "Lotes salvos com sucesso.",
+    "parcelDeletedSuccessMessage": "ã_Parcel deleted successfully_________Ç.",
+    "parcelDeleteErrorMessage": "ã_Error in deleteing parcel_________Ç.",
     "enterValidParcelNameMessage": "Insira nome de lote válido.",
     "enterValidPlanNameMessage": "Insira nome de plano válido.",
     "enterValidDocumentTypeMessage": "Tipo de documento inválido.",

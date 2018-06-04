@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Tipus de línia",
     "parcelPointSymbolLabel": "Símbol de punt de parcel·la",
     "parcelPointSymbolHintText": "Suggeriment: s'utilitza per visualitzar el símbol de punt per a l'origen de la línia.",
+    "startOrRotationSymbolLabel": "ó_Start and Rotate Point Symbol__________à",
+    "startOrRotationSymbolHintText": "ó_Hint: Used to display start and rotate point symbol_________________à.",
     "symbolPickerPreviewText": "Visualització prèvia",
     "selectLineLayerLabel": "Seleccioneu la capa de línies"
   },

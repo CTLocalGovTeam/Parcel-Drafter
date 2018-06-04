@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Επιλέξτε αγροτεμάχιο για επεξεργασία",
   "mapTooltipForUpdateStartPoint": "Κάντε κλικ για ενημέρωση του σημείου έναρξης",
   "mapTooltipForScreenDigitization": "Κάντε κλικ για προσθήκη σημείου αγροτεμαχίου",
+  "mapTooltipForUpdatingRotaionPoint": "Đ_Click to update rotation point__________ớ",
   "mapTooltipForRotate": "Σύρετε για περιστροφή",
   "mapTooltipForScale": "Σύρετε για κλιμάκωση",
   "backButtonTooltip": "Πίσω",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Ανάπτυξη πλέγματος",
     "collapseGridTooltipText": "Σύμπτυξη πλέγματος",
     "zoomToLocationTooltipText": "Εστίαση στην τοποθεσία",
-    "onScreenDigitizationTooltipText": "Ψηφιοποίηση"
+    "onScreenDigitizationTooltipText": "Ψηφιοποίηση",
+    "updateRotationPointTooltipText": "Đ_Update rotation point_______ớ"
   },
   "traverseSettings": {
     "bearingLabel": "Αντιστοιχία",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Δεν είναι δυνατή η αποθήκευση γραμμών αγροτεμαχίου.",
     "unableToUpdateParcelLines": "Δεν είναι δυνατή η ενημέρωση γραμμών αγροτεμαχίου.",
     "parcelSavedSuccessMessage": "Το αγροτεμάχιο αποθηκεύτηκε με επιτυχία.",
+    "parcelDeletedSuccessMessage": "Đ_Parcel deleted successfully_________ớ.",
+    "parcelDeleteErrorMessage": "Đ_Error in deleteing parcel_________ớ.",
     "enterValidParcelNameMessage": "Εισαγάγετε έγκυρο όνομα αγροτεμαχίου.",
     "enterValidPlanNameMessage": "Εισαγάγετε έγκυρο όνομα σχεδίου.",
     "enterValidDocumentTypeMessage": "Μη έγκυρος τύπος εγγράφου.",

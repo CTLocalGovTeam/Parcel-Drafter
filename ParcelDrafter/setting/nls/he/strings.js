@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "סוג קו",
     "parcelPointSymbolLabel": "סמל של נקודת חלקות",
     "parcelPointSymbolHintText": "רמז: משמש להצגת סמל נקודה עבור מקור הקו.",
+    "startOrRotationSymbolLabel": "כן_Start and Rotate Point Symbol__________ש",
+    "startOrRotationSymbolHintText": "כן_Hint: Used to display start and rotate point symbol_________________ש.",
     "symbolPickerPreviewText": "תצוגה מקדימה",
     "selectLineLayerLabel": "בחר שכבת קו"
   },

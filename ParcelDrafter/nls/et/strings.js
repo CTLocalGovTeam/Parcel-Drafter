@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Valige maaüksus, mida redigeerida",
   "mapTooltipForUpdateStartPoint": "Klõpsake alguspunkti värskendamiseks",
   "mapTooltipForScreenDigitization": "Klõpsake maaüksuse punkti lisamiseks",
+  "mapTooltipForUpdatingRotaionPoint": "Š_Click to update rotation point__________ä",
   "mapTooltipForRotate": "Haara pööramiseks",
   "mapTooltipForScale": "Haara suuruse muutmiseks",
   "backButtonTooltip": "Tagasi",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Laienda ruudustik",
     "collapseGridTooltipText": "Ahenda ruudustik",
     "zoomToLocationTooltipText": "Suumi asukohta",
-    "onScreenDigitizationTooltipText": "Digiteeri"
+    "onScreenDigitizationTooltipText": "Digiteeri",
+    "updateRotationPointTooltipText": "Š_Update rotation point_______ä"
   },
   "traverseSettings": {
     "bearingLabel": "Kurss",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Maaüksuse jooni ei saa salvestada.",
     "unableToUpdateParcelLines": "Maaüksuse jooni ei saa värskendada.",
     "parcelSavedSuccessMessage": "Maaüksus salvestati edukalt.",
+    "parcelDeletedSuccessMessage": "Š_Parcel deleted successfully_________ä.",
+    "parcelDeleteErrorMessage": "Š_Error in deleteing parcel_________ä.",
     "enterValidParcelNameMessage": "Sisestage kehtiv maaüksuse nimi.",
     "enterValidPlanNameMessage": "Sisestage kehtiv plaani nimi.",
     "enterValidDocumentTypeMessage": "Vigane dokumenditüüp.",

@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Vui lòng chọn một lô đất để chỉnh sửa",
   "mapTooltipForUpdateStartPoint": "Bấm để cập nhật điểm bắt đầu",
   "mapTooltipForScreenDigitization": "Bấm để thêm điểm lô đất",
+  "mapTooltipForUpdatingRotaionPoint": "Đ_Click to update rotation point__________ớ",
   "mapTooltipForRotate": "Kéo để xoay",
   "mapTooltipForScale": "Kéo để đo tỷ lệ",
   "backButtonTooltip": "Quay lại",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Mở rộng lưới",
     "collapseGridTooltipText": "Thu hẹp lưới",
     "zoomToLocationTooltipText": "Phóng to đến vị trí",
-    "onScreenDigitizationTooltipText": "Số hóa"
+    "onScreenDigitizationTooltipText": "Số hóa",
+    "updateRotationPointTooltipText": "Đ_Update rotation point_______ớ"
   },
   "traverseSettings": {
     "bearingLabel": "Hướng",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Không thể lưu đường thẳng lô đất.",
     "unableToUpdateParcelLines": "Không thể cập nhật đường thẳng lô đất.",
     "parcelSavedSuccessMessage": "Đã lưu lô đất thành công.",
+    "parcelDeletedSuccessMessage": "Đ_Parcel deleted successfully_________ớ.",
+    "parcelDeleteErrorMessage": "Đ_Error in deleteing parcel_________ớ.",
     "enterValidParcelNameMessage": "Vui lòng nhập tên lô đất hợp lệ.",
     "enterValidPlanNameMessage": "Vui lòng nhập tên kế hoạch hợp lệ.",
     "enterValidDocumentTypeMessage": "Loại hồ sơ không hợp lệ.",

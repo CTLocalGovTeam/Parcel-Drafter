@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "โปรดเลือกข้อมูลที่ต้องการแก้ไข",
   "mapTooltipForUpdateStartPoint": "คลิกเพื่ออัพเดทจุดเริ่มต้น",
   "mapTooltipForScreenDigitization": "คลิกเพื่อเพิ่มจุดข้อมูล",
+  "mapTooltipForUpdatingRotaionPoint": "ก้_Click to update rotation point__________ษฺ",
   "mapTooltipForRotate": "ลากเพื่อหมุน",
   "mapTooltipForScale": "ลากเพื่อปรับขนาด",
   "backButtonTooltip": "กลับ",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "สำรวจตารางกริด",
     "collapseGridTooltipText": "ยุบตารางกริด",
     "zoomToLocationTooltipText": "ขยายไปยังตำแหน่ง",
-    "onScreenDigitizationTooltipText": "วาด"
+    "onScreenDigitizationTooltipText": "วาด",
+    "updateRotationPointTooltipText": "ก้_Update rotation point_______ษฺ"
   },
   "traverseSettings": {
     "bearingLabel": "แบริ่ง",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "ไม่สามารถบันทึกเส้นรอบแปลงที่ดิน",
     "unableToUpdateParcelLines": "ไม่สามารถอัปเดตเส้นรอบแปลงที่ดิน",
     "parcelSavedSuccessMessage": "บันทึกแปลงที่ดินไว้เรียบร้อยแล้ว",
+    "parcelDeletedSuccessMessage": "ก้_Parcel deleted successfully_________ษฺ.",
+    "parcelDeleteErrorMessage": "ก้_Error in deleteing parcel_________ษฺ.",
     "enterValidParcelNameMessage": "กรุณาใส่ชื่อแปลงที่ดินที่ถูกต้อง",
     "enterValidPlanNameMessage": "โปรดป้อนชื่อแผนที่ถูกต้อง",
     "enterValidDocumentTypeMessage": "ประเภทเอกสารไม่ถูกต้อง",

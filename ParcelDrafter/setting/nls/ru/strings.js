@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Тип линии",
     "parcelPointSymbolLabel": "Точечный символ участка",
     "parcelPointSymbolHintText": "Подсказка: используется для отображения точечного символа для исходной точки линии.",
+    "startOrRotationSymbolLabel": "Ж_Start and Rotate Point Symbol__________Я",
+    "startOrRotationSymbolHintText": "Ж_Hint: Used to display start and rotate point symbol_________________Я.",
     "symbolPickerPreviewText": "Предварительный просмотр",
     "selectLineLayerLabel": "Выбрать линейный слой"
   },

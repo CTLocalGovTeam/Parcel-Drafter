@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Tip linije",
     "parcelPointSymbolLabel": "Simbol točke parcele",
     "parcelPointSymbolHintText": "Namig: Uporablja se za prikaz točkovnega simbola za izhodišče linije.",
+    "startOrRotationSymbolLabel": "Š_Start and Rotate Point Symbol__________č",
+    "startOrRotationSymbolHintText": "Š_Hint: Used to display start and rotate point symbol_________________č.",
     "symbolPickerPreviewText": "Predogled",
     "selectLineLayerLabel": "Izberite linijski sloj"
   },
@@ -62,16 +64,16 @@ define({
     "boundaryLineLabel": "Razmejitvena linija"
   },
   "closureSetting": {
-    "snappingLayerLabel": "Magnetenje slojev",
+    "snappingLayerLabel": "Privlačnost slojev",
     "snappingBtnLabel": "Nastavi",
-    "snappingLayerHintText": "Namig: Izberi sloje, na katere se bodo magnetile linije parcel.",
+    "snappingLayerHintText": "Namig: Izberi sloje, na katere se bodo privlačile linije parcel.",
     "miscloseDistanceLabel": "Razdalja odstopanja",
     "miscloseDistanceHintText": "Namig: Določite razdaljo odstopanja in njene enote.",
     "miscloseRatioLabel": "Razmerje odstopanja",
     "miscloseRatioHintText": "Namig: Določite razmerje odstopanja.",
-    "snappingToleranceLabel": "Doseg magnetenja",
+    "snappingToleranceLabel": "Doseg privlačnosti",
     "pixelLabel": "Piksli",
-    "snappingToleranceHintText": "Namig: Določite doseg magnetenja.",
+    "snappingToleranceHintText": "Namig: Določite doseg privlačnosti.",
     "selectLayerLabel": "Izberi sloj"
   },
   "errorMsg": {
@@ -94,7 +96,7 @@ define({
     "invalidPolylineLayer": "Izberite veljaven polilinijski sloj parcele",
     "invalidPolygonLayer": "Izberite veljaven poligonski sloj parcele",
     "invalidMiscloseDistance": "Vnesite veljavno razdaljo odstopanja",
-    "invalidSnappingTolerance": "Vnesite veljaven doseg magnetenja",
+    "invalidSnappingTolerance": "Vnesite veljaven doseg privlačnosti",
     "invalidMiscloseRatio": "Vnesite veljavno razmerje odstopanja",
     "selectDistinctLineTypes": "Izberite razlikovalno vrednost za vsak tip linije",
     "invalidConnectionLineType": "Neveljavna vrednost povezovalne linije",

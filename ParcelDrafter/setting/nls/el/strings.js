@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Τύπος γραμμής",
     "parcelPointSymbolLabel": "Σύμβολο σημείου αγροτεμαχίου",
     "parcelPointSymbolHintText": "Υπόδειξη: Χρησιμοποιείται για την εμφάνιση του συμβόλου σημείου για την προέλευση της γραμμής.",
+    "startOrRotationSymbolLabel": "Đ_Start and Rotate Point Symbol__________ớ",
+    "startOrRotationSymbolHintText": "Đ_Hint: Used to display start and rotate point symbol_________________ớ.",
     "symbolPickerPreviewText": "Προεπισκόπηση",
     "selectLineLayerLabel": "Επιλογή θεματικού επιπέδου γραμμής"
   },

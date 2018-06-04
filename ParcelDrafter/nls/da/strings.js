@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Vælg en parcel, der skal redigeres",
   "mapTooltipForUpdateStartPoint": "Klik for at opdatere startpunkt",
   "mapTooltipForScreenDigitization": "Klik for at tilføje parcelpunkt",
+  "mapTooltipForUpdatingRotaionPoint": "ø_Click to update rotation point__________å",
   "mapTooltipForRotate": "Træk for at rotere",
   "mapTooltipForScale": "Træk for at skalere",
   "backButtonTooltip": "Tilbage",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Udvid gitter",
     "collapseGridTooltipText": "Skjul gitter",
     "zoomToLocationTooltipText": "Zoom til position",
-    "onScreenDigitizationTooltipText": "Digitalisér"
+    "onScreenDigitizationTooltipText": "Digitalisér",
+    "updateRotationPointTooltipText": "ø_Update rotation point_______å"
   },
   "traverseSettings": {
     "bearingLabel": "Pejling",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Kan ikke gemme parcellinjer.",
     "unableToUpdateParcelLines": "Kan ikke opdatere parcellinjer.",
     "parcelSavedSuccessMessage": "Parcel er gemt med succes.",
+    "parcelDeletedSuccessMessage": "ø_Parcel deleted successfully_________å.",
+    "parcelDeleteErrorMessage": "ø_Error in deleteing parcel_________å.",
     "enterValidParcelNameMessage": "Angiv et gyldigt parcelnavn.",
     "enterValidPlanNameMessage": "Angiv et gyldigt plannavn.",
     "enterValidDocumentTypeMessage": "Ugyldig dokumenttype.",

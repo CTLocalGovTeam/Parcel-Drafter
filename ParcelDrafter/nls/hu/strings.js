@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Jelöljön ki egy szerkeszteni kívánt parcellát",
   "mapTooltipForUpdateStartPoint": "Kattintson a kezdőpont frissítéséhez",
   "mapTooltipForScreenDigitization": "Kattintson egy parcellapont hozzáadásához",
+  "mapTooltipForUpdatingRotaionPoint": "í_Click to update rotation point__________ő",
   "mapTooltipForRotate": "Húzza a forgatáshoz",
   "mapTooltipForScale": "Húzza a méretezéshez",
   "backButtonTooltip": "Vissza",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Rács kibontása",
     "collapseGridTooltipText": "Rács bezárása",
     "zoomToLocationTooltipText": "Zoomolás a helyre",
-    "onScreenDigitizationTooltipText": "Digitalizálás"
+    "onScreenDigitizationTooltipText": "Digitalizálás",
+    "updateRotationPointTooltipText": "í_Update rotation point_______ő"
   },
   "traverseSettings": {
     "bearingLabel": "Irányszög",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Nem sikerült menteni a parcella vonalait.",
     "unableToUpdateParcelLines": "Nem sikerült frissíteni a parcella vonalait.",
     "parcelSavedSuccessMessage": "Parcella sikeresen mentve.",
+    "parcelDeletedSuccessMessage": "í_Parcel deleted successfully_________ő.",
+    "parcelDeleteErrorMessage": "í_Error in deleteing parcel_________ő.",
     "enterValidParcelNameMessage": "Adjon meg érvényes nevet a parcellához.",
     "enterValidPlanNameMessage": "Adjon meg érvényes nevet a tervhez.",
     "enterValidDocumentTypeMessage": "Érvénytelen dokumentumtípus.",

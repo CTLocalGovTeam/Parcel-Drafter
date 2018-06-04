@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Joone tüüp",
     "parcelPointSymbolLabel": "Maaüksuse punkti sümbol",
     "parcelPointSymbolHintText": "Vihje: kasutatakse joone alguspunkti sümboli kuvamiseks.",
+    "startOrRotationSymbolLabel": "Š_Start and Rotate Point Symbol__________ä",
+    "startOrRotationSymbolHintText": "Š_Hint: Used to display start and rotate point symbol_________________ä.",
     "symbolPickerPreviewText": "Eelvaade",
     "selectLineLayerLabel": "Vali joonekiht"
   },

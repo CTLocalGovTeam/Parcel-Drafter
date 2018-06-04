@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Tip de linie",
     "parcelPointSymbolLabel": "Simbol punct parcelă",
     "parcelPointSymbolHintText": "Sugestie: Utilizat pentru afişarea simbolului punctului pentru originea liniei.",
+    "startOrRotationSymbolLabel": "Ă_Start and Rotate Point Symbol__________ș",
+    "startOrRotationSymbolHintText": "Ă_Hint: Used to display start and rotate point symbol_________________ș.",
     "symbolPickerPreviewText": "Previzualizare",
     "selectLineLayerLabel": "Selectaţi un strat tematic cu linii"
   },

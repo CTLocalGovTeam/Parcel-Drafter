@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Typ linii",
     "parcelPointSymbolLabel": "Symbol punktu działki",
     "parcelPointSymbolHintText": "Wskazówka: Służy do wyświetlania symbolu punktu źródła linii.",
+    "startOrRotationSymbolLabel": "ł_Start and Rotate Point Symbol__________ą",
+    "startOrRotationSymbolHintText": "ł_Hint: Used to display start and rotate point symbol_________________ą.",
     "symbolPickerPreviewText": "Zobacz podgląd",
     "selectLineLayerLabel": "Wybierz warstwę liniową"
   },

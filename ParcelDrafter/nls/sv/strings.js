@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Välj en byggnad att redigera",
   "mapTooltipForUpdateStartPoint": "Klicka för att uppdatera startpunkten",
   "mapTooltipForScreenDigitization": "Klicka för att lägga till en byggnadspunkt",
+  "mapTooltipForUpdatingRotaionPoint": "Å_Click to update rotation point__________ö",
   "mapTooltipForRotate": "Dra för att rotera",
   "mapTooltipForScale": "Dra för att skala",
   "backButtonTooltip": "Bakåt",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Expandera rutnät",
     "collapseGridTooltipText": "Komprimera rutnät",
     "zoomToLocationTooltipText": "Zooma till plats",
-    "onScreenDigitizationTooltipText": "Digitalisera"
+    "onScreenDigitizationTooltipText": "Digitalisera",
+    "updateRotationPointTooltipText": "Å_Update rotation point_______ö"
   },
   "traverseSettings": {
     "bearingLabel": "Bäring",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Det gick inte att spara byggnadslinjerna.",
     "unableToUpdateParcelLines": "Det gick inte att uppdatera byggnadslinjerna.",
     "parcelSavedSuccessMessage": "Byggnaden har sparats.",
+    "parcelDeletedSuccessMessage": "Å_Parcel deleted successfully_________ö.",
+    "parcelDeleteErrorMessage": "Å_Error in deleteing parcel_________ö.",
     "enterValidParcelNameMessage": "Ange ett giltigt byggnadsnamn.",
     "enterValidPlanNameMessage": "Ange ett giltigt plannamn.",
     "enterValidDocumentTypeMessage": "Ogiltig dokumenttyp.",

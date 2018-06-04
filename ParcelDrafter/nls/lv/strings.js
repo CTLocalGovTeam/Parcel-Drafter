@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Izvēlieties zemes gabalu, ko rediģēt",
   "mapTooltipForUpdateStartPoint": "Noklikšķiniet, lai atjauninātu sākuma punktu",
   "mapTooltipForScreenDigitization": "Noklikšķiniet, lai pievienotu zemes gabala punktu",
+  "mapTooltipForUpdatingRotaionPoint": "ķ_Click to update rotation point__________ū",
   "mapTooltipForRotate": "Velciet, lai rotētu",
   "mapTooltipForScale": "Velciet, lai mērogotu",
   "backButtonTooltip": "Atpakaļ",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Izvērst režģi",
     "collapseGridTooltipText": "Sakļaut režģi",
     "zoomToLocationTooltipText": "Pietuvināt atrašanās vietai",
-    "onScreenDigitizationTooltipText": "Digitalizēt"
+    "onScreenDigitizationTooltipText": "Digitalizēt",
+    "updateRotationPointTooltipText": "ķ_Update rotation point_______ū"
   },
   "traverseSettings": {
     "bearingLabel": "Peilējums",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Nevar saglabāt zemes gabala līnijas.",
     "unableToUpdateParcelLines": "Nevar atjaunināt zemes gabala līnijas.",
     "parcelSavedSuccessMessage": "Zemes gabals veiksmīgi saglabāts.",
+    "parcelDeletedSuccessMessage": "ķ_Parcel deleted successfully_________ū.",
+    "parcelDeleteErrorMessage": "ķ_Error in deleteing parcel_________ū.",
     "enterValidParcelNameMessage": "Ievadiet derīgu zemes gabala nosaukumu.",
     "enterValidPlanNameMessage": "Ievadiet derīgu plāna nosaukumu.",
     "enterValidDocumentTypeMessage": "Nederīgs dokumenta veids.",

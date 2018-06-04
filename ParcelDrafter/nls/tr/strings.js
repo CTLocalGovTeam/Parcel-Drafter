@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Düzenlenecek yapıyı seçin",
   "mapTooltipForUpdateStartPoint": "Başlangıç noktasını güncellemek için tıklayın",
   "mapTooltipForScreenDigitization": "Yapı noktası eklemek için tıklayın",
+  "mapTooltipForUpdatingRotaionPoint": "ı_Click to update rotation point__________İ",
   "mapTooltipForRotate": "Döndürmek için sürükleyin",
   "mapTooltipForScale": "Ölçeklendirmek için sürükleyin",
   "backButtonTooltip": "Geri",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Kılavuzu genişlet",
     "collapseGridTooltipText": "Kılavuzu daralt",
     "zoomToLocationTooltipText": "Konuma yaklaştır",
-    "onScreenDigitizationTooltipText": "Sayısallaştırma"
+    "onScreenDigitizationTooltipText": "Sayısallaştırma",
+    "updateRotationPointTooltipText": "ı_Update rotation point_______İ"
   },
   "traverseSettings": {
     "bearingLabel": "Yön",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Yapı çizgileri kaydedilemiyor.",
     "unableToUpdateParcelLines": "Yapı çizgileri güncellenemiyor.",
     "parcelSavedSuccessMessage": "Yapı başarıyla kaydedildi.",
+    "parcelDeletedSuccessMessage": "ı_Parcel deleted successfully_________İ.",
+    "parcelDeleteErrorMessage": "ı_Error in deleteing parcel_________İ.",
     "enterValidParcelNameMessage": "Geçerli yapı adı girin.",
     "enterValidPlanNameMessage": "Geçerli plan adı girin.",
     "enterValidDocumentTypeMessage": "Geçersiz belge türü.",

@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Izaberite parcelu za uređivanje",
   "mapTooltipForUpdateStartPoint": "Kliknite da ažurirate početnu tačku",
   "mapTooltipForScreenDigitization": "Kliknite da biste dodali tačku parcele",
+  "mapTooltipForUpdatingRotaionPoint": "Č_Click to update rotation point__________ž",
   "mapTooltipForRotate": "Prevucite da biste rotirali",
   "mapTooltipForScale": "Prevucite da biste uklopili",
   "backButtonTooltip": "Nazad",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Proširi mrežu",
     "collapseGridTooltipText": "Skupi mrežu",
     "zoomToLocationTooltipText": "Zumiraj na lokaciju",
-    "onScreenDigitizationTooltipText": "Digitalizuj"
+    "onScreenDigitizationTooltipText": "Digitalizuj",
+    "updateRotationPointTooltipText": "Č_Update rotation point_______ž"
   },
   "traverseSettings": {
     "bearingLabel": "Direkcioni ugao",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Čuvanje linija parcele nije moguće.",
     "unableToUpdateParcelLines": "Ažuriranje linija parcele nije moguće.",
     "parcelSavedSuccessMessage": "Parcela je uspešno sačuvana.",
+    "parcelDeletedSuccessMessage": "Č_Parcel deleted successfully_________ž.",
+    "parcelDeleteErrorMessage": "Č_Error in deleteing parcel_________ž.",
     "enterValidParcelNameMessage": "Unesite validno ime parcele.",
     "enterValidPlanNameMessage": "Unesite validno ime plana.",
     "enterValidDocumentTypeMessage": "Nevažeći tip dokumenta.",

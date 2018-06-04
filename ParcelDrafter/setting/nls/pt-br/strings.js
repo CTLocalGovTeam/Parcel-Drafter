@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Tipo de Linha",
     "parcelPointSymbolLabel": "Símbolo de Ponto de Lotes",
     "parcelPointSymbolHintText": "Sugestão: Utilizado para exibir símbolo de ponto para a origem da linha.",
+    "startOrRotationSymbolLabel": "ã_Start and Rotate Point Symbol__________Ç",
+    "startOrRotationSymbolHintText": "ã_Hint: Used to display start and rotate point symbol_________________Ç.",
     "symbolPickerPreviewText": "Visualizar",
     "selectLineLayerLabel": "Selecione a camada de linha"
   },

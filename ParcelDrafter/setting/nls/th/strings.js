@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "ประเภทของเส้น",
     "parcelPointSymbolLabel": "สัญลักษณ์ของจุดแปลงที่ดิน",
     "parcelPointSymbolHintText": "คำแนะนำ: ใช้เพื่อแสดงสัญลักษณ์จุดเริ่มต้นของเส้น",
+    "startOrRotationSymbolLabel": "ก้_Start and Rotate Point Symbol__________ษฺ",
+    "startOrRotationSymbolHintText": "ก้_Hint: Used to display start and rotate point symbol_________________ษฺ.",
     "symbolPickerPreviewText": "ภาพตัวอย่าง",
     "selectLineLayerLabel": "เลือกชั้นข้อมูลเส้น"
   },

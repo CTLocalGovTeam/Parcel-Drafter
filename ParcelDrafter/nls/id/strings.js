@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Harap pilih persil untuk diedit",
   "mapTooltipForUpdateStartPoint": "Klik untuk memperbarui titik awal",
   "mapTooltipForScreenDigitization": "Klik untuk menambahkan titik persil",
+  "mapTooltipForUpdatingRotaionPoint": "ng_Click to update rotation point__________ny",
   "mapTooltipForRotate": "Seret untuk putar",
   "mapTooltipForScale": "Seret untuk mengubah skala",
   "backButtonTooltip": "Kembali",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Perluas grid",
     "collapseGridTooltipText": "Ciutkan grid",
     "zoomToLocationTooltipText": "Zoom ke lokasi",
-    "onScreenDigitizationTooltipText": "Digitalisasi"
+    "onScreenDigitizationTooltipText": "Digitalisasi",
+    "updateRotationPointTooltipText": "ng_Update rotation point_______ny"
   },
   "traverseSettings": {
     "bearingLabel": "Poros",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Tidak dapat menyimpan garis persil.",
     "unableToUpdateParcelLines": "Tidak dapat memperbarui garis persil.",
     "parcelSavedSuccessMessage": "Persil disimpan dengan sukses.",
+    "parcelDeletedSuccessMessage": "ng_Parcel deleted successfully_________ny.",
+    "parcelDeleteErrorMessage": "ng_Error in deleteing parcel_________ny.",
     "enterValidParcelNameMessage": "Harap masukkan nama persil yang valid.",
     "enterValidPlanNameMessage": "Harap masukkan nama rencana yang valid.",
     "enterValidDocumentTypeMessage": "Jenis dokumen tidak valid.",

@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "रेखा प्रकार",
     "parcelPointSymbolLabel": "पार्सल बिंदु चिन्ह",
     "parcelPointSymbolHintText": "संकेत: रेखा के आरंभ को प्रदर्शित करने के लिए बिंदु चिन्ह का इस्तेमाल जाता है।",
+    "startOrRotationSymbolLabel": "आ_Start and Rotate Point Symbol__________ज",
+    "startOrRotationSymbolHintText": "आ_Hint: Used to display start and rotate point symbol_________________ज.",
     "symbolPickerPreviewText": "पूर्वावलोकन करें",
     "selectLineLayerLabel": "रेखाओं की लेयरों का चयन करें"
   },

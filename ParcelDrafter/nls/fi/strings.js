@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Valitse muokattava kiinteistö",
   "mapTooltipForUpdateStartPoint": "Päivitä aloituspiste napsauttamalla",
   "mapTooltipForScreenDigitization": "Lisää kiinteistön piste napsauttamalla",
+  "mapTooltipForUpdatingRotaionPoint": "Å_Click to update rotation point__________ö",
   "mapTooltipForRotate": "Käännä vetämällä",
   "mapTooltipForScale": "Muuta mittakaavaa vetämällä",
   "backButtonTooltip": "Takaisin",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Laajenna ruudukko",
     "collapseGridTooltipText": "Tiivistä ruudukko",
     "zoomToLocationTooltipText": "Tarkenna sijaintiin",
-    "onScreenDigitizationTooltipText": "Digitoi"
+    "onScreenDigitizationTooltipText": "Digitoi",
+    "updateRotationPointTooltipText": "Å_Update rotation point_______ö"
   },
   "traverseSettings": {
     "bearingLabel": "Suuntima",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Kiinteistön viivoja ei voi tallentaa.",
     "unableToUpdateParcelLines": "Kiinteistön viivoja ei voi päivittää.",
     "parcelSavedSuccessMessage": "Kiinteistö on tallennettu.",
+    "parcelDeletedSuccessMessage": "Å_Parcel deleted successfully_________ö.",
+    "parcelDeleteErrorMessage": "Å_Error in deleteing parcel_________ö.",
     "enterValidParcelNameMessage": "Kirjoita kelvollinen kiinteistön nimi.",
     "enterValidPlanNameMessage": "Kirjoita kelvollinen suunnitelman nimi.",
     "enterValidDocumentTypeMessage": "Virheellinen dokumenttityyppi.",

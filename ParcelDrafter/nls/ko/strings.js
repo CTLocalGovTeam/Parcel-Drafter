@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "편집할 필지를 선택하세요.",
   "mapTooltipForUpdateStartPoint": "시작 포인트를 업데이트하려면 클릭",
   "mapTooltipForScreenDigitization": "필지 포인트를 추가하려면 클릭",
+  "mapTooltipForUpdatingRotaionPoint": "한_Click to update rotation point__________빠",
   "mapTooltipForRotate": "드래그하여 회전",
   "mapTooltipForScale": "드래그하여 크기 조정",
   "backButtonTooltip": "뒤로",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "그리드 확장",
     "collapseGridTooltipText": "그리드 축소",
     "zoomToLocationTooltipText": "위치로 확대",
-    "onScreenDigitizationTooltipText": "디지털화"
+    "onScreenDigitizationTooltipText": "디지털화",
+    "updateRotationPointTooltipText": "한_Update rotation point_______빠"
   },
   "traverseSettings": {
     "bearingLabel": "방위각",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "필지 라인을 저장할 수 없습니다.",
     "unableToUpdateParcelLines": "필지 라인을 업데이트할 수 없습니다.",
     "parcelSavedSuccessMessage": "필지가 저장되었습니다.",
+    "parcelDeletedSuccessMessage": "한_Parcel deleted successfully_________빠.",
+    "parcelDeleteErrorMessage": "한_Error in deleteing parcel_________빠.",
     "enterValidParcelNameMessage": "유효한 필지 이름을 입력하세요.",
     "enterValidPlanNameMessage": "유효한 계획 이름을 입력하세요.",
     "enterValidDocumentTypeMessage": "문서 유형이 잘못되었습니다.",

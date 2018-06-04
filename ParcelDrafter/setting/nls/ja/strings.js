@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "ライン タイプ",
     "parcelPointSymbolLabel": "パーセル ポイント シンボル",
     "parcelPointSymbolHintText": "ヒント: ラインの原点のポイント シンボルを表示するために使用されます。",
+    "startOrRotationSymbolLabel": "須_Start and Rotate Point Symbol__________鷗",
+    "startOrRotationSymbolHintText": "須_Hint: Used to display start and rotate point symbol_________________鷗.",
     "symbolPickerPreviewText": "プレビュー",
     "selectLineLayerLabel": "ライン レイヤーの選択"
   },

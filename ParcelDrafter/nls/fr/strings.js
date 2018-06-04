@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Sélectionnez une parcelle à modifier",
   "mapTooltipForUpdateStartPoint": "Cliquez pour mettre à jour le point de départ",
   "mapTooltipForScreenDigitization": "Cliquez pour ajouter un point de parcelle",
+  "mapTooltipForUpdatingRotaionPoint": "æ_Click to update rotation point__________Â",
   "mapTooltipForRotate": "Faites glisser pour faire pivoter",
   "mapTooltipForScale": "Faire glisser pour mettre à l'échelle",
   "backButtonTooltip": "Précédent",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Développer la grille",
     "collapseGridTooltipText": "Réduire la grille",
     "zoomToLocationTooltipText": "Zoom sur l'emplacement",
-    "onScreenDigitizationTooltipText": "Numériser"
+    "onScreenDigitizationTooltipText": "Numériser",
+    "updateRotationPointTooltipText": "æ_Update rotation point_______Â"
   },
   "traverseSettings": {
     "bearingLabel": "Orientation",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Impossible d'enregistrer les lignes de parcelle.",
     "unableToUpdateParcelLines": "Impossible de mettre à jour les lignes de parcelle.",
     "parcelSavedSuccessMessage": "Parcelle enregistrée avec succès.",
+    "parcelDeletedSuccessMessage": "æ_Parcel deleted successfully_________Â.",
+    "parcelDeleteErrorMessage": "æ_Error in deleteing parcel_________Â.",
     "enterValidParcelNameMessage": "Entrez un nom de parcelle valide.",
     "enterValidPlanNameMessage": "Entrez un nom de plan valide.",
     "enterValidDocumentTypeMessage": "Type de document non valide",

@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Vyberte parcelu, kterou chcete upravit",
   "mapTooltipForUpdateStartPoint": "Kliknutím aktualizujete počáteční bod",
   "mapTooltipForScreenDigitization": "Kliknutím přidáte bod parcely",
+  "mapTooltipForUpdatingRotaionPoint": "Ř_Click to update rotation point__________ů",
   "mapTooltipForRotate": "Tažením otáčejte",
   "mapTooltipForScale": "Tažením změňte měřítko",
   "backButtonTooltip": "Zpět",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Rozbalit mřížku",
     "collapseGridTooltipText": "Sbalit mřížku",
     "zoomToLocationTooltipText": "Přiblížit na polohu",
-    "onScreenDigitizationTooltipText": "Digitalizovat"
+    "onScreenDigitizationTooltipText": "Digitalizovat",
+    "updateRotationPointTooltipText": "Ř_Update rotation point_______ů"
   },
   "traverseSettings": {
     "bearingLabel": "Azimut",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Parcelní linie nelze uložit.",
     "unableToUpdateParcelLines": "Parcelní linie nelze aktualizovat.",
     "parcelSavedSuccessMessage": "Parcela byla úspěšně uložena.",
+    "parcelDeletedSuccessMessage": "Ř_Parcel deleted successfully_________ů.",
+    "parcelDeleteErrorMessage": "Ř_Error in deleteing parcel_________ů.",
     "enterValidParcelNameMessage": "Zadejte platný název parcely.",
     "enterValidPlanNameMessage": "Zadejte platný název plánu.",
     "enterValidDocumentTypeMessage": "Neplatný typ dokumentu",

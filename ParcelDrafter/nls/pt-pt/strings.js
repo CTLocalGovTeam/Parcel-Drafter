@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Por favor, selecione uma parcela para editar",
   "mapTooltipForUpdateStartPoint": "Clique para atualizar o ponto de partida",
   "mapTooltipForScreenDigitization": "Clique para adicionar ponto de parcela",
+  "mapTooltipForUpdatingRotaionPoint": "ã_Click to update rotation point__________Ç",
   "mapTooltipForRotate": "Arrastar para rodar",
   "mapTooltipForScale": "Arrastar para escala",
   "backButtonTooltip": "Retroceder",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Expandir grelha",
     "collapseGridTooltipText": "Fechar grelha",
     "zoomToLocationTooltipText": "Efectuar Zoom para a localização",
-    "onScreenDigitizationTooltipText": "Digitalizar"
+    "onScreenDigitizationTooltipText": "Digitalizar",
+    "updateRotationPointTooltipText": "ã_Update rotation point_______Ç"
   },
   "traverseSettings": {
     "bearingLabel": "Suporte",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "Não é possível guardar linhas de parcelas.",
     "unableToUpdateParcelLines": "Não é possível atualizar linhas de parcelas.",
     "parcelSavedSuccessMessage": "Parcela guardada com sucesso.",
+    "parcelDeletedSuccessMessage": "ã_Parcel deleted successfully_________Ç.",
+    "parcelDeleteErrorMessage": "ã_Error in deleteing parcel_________Ç.",
     "enterValidParcelNameMessage": "Por favor, introduza um nome de parcela válido.",
     "enterValidPlanNameMessage": "Por favor, introduza um nome de plano válido.",
     "enterValidDocumentTypeMessage": "Tipo de documento inválido.",

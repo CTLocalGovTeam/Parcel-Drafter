@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Līnijas tips",
     "parcelPointSymbolLabel": "Zemes gabala punkta simbols",
     "parcelPointSymbolHintText": "Padoms. To izmanto punkta simbola attēlošanai līnijas sākumā.",
+    "startOrRotationSymbolLabel": "ķ_Start and Rotate Point Symbol__________ū",
+    "startOrRotationSymbolHintText": "ķ_Hint: Used to display start and rotate point symbol_________________ū.",
     "symbolPickerPreviewText": "Priekšskatījums",
     "selectLineLayerLabel": "Izvēlēties līniju slāni"
   },

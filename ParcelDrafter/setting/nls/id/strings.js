@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Jenis Garis",
     "parcelPointSymbolLabel": "Simbol Titik Persil",
     "parcelPointSymbolHintText": "Petunjuk: Digunakan untuk menampilkan simbol titik untuk asal garis.",
+    "startOrRotationSymbolLabel": "ng_Start and Rotate Point Symbol__________ny",
+    "startOrRotationSymbolHintText": "ng_Hint: Used to display start and rotate point symbol_________________ny.",
     "symbolPickerPreviewText": "Pratinjau",
     "selectLineLayerLabel": "Pilih layer garis"
   },

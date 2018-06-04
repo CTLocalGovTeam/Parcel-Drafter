@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Viivatyyppi",
     "parcelPointSymbolLabel": "Kiinteistön pistesymboli",
     "parcelPointSymbolHintText": "Vihje: käytetään viivan lähtöpisteen pistesymbolin näyttämiseen.",
+    "startOrRotationSymbolLabel": "Å_Start and Rotate Point Symbol__________ö",
+    "startOrRotationSymbolHintText": "Å_Hint: Used to display start and rotate point symbol_________________ö.",
     "symbolPickerPreviewText": "Esikatselu",
     "selectLineLayerLabel": "Valitse viivakarttataso"
   },

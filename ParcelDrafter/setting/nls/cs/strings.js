@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Typ linie",
     "parcelPointSymbolLabel": "Symbol bodu parcely",
     "parcelPointSymbolHintText": "Nápověda: Používá se k zobrazení symbolu bodu pro počátek linie.",
+    "startOrRotationSymbolLabel": "Ř_Start and Rotate Point Symbol__________ů",
+    "startOrRotationSymbolHintText": "Ř_Hint: Used to display start and rotate point symbol_________________ů.",
     "symbolPickerPreviewText": "Náhled",
     "selectLineLayerLabel": "Vyberte liniovou vrstvu"
   },

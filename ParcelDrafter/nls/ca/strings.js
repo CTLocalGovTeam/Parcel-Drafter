@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "Seleccioneu una parcel·la que vulgueu editar",
   "mapTooltipForUpdateStartPoint": "Feu clic per actualitzar el punt d'inici",
   "mapTooltipForScreenDigitization": "Feu clic per afegir un punt de parcel·la",
+  "mapTooltipForUpdatingRotaionPoint": "ó_Click to update rotation point__________à",
   "mapTooltipForRotate": "Arrossega per girar",
   "mapTooltipForScale": "Arrossega per ajustar l'escala",
   "backButtonTooltip": "Enrere",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "Expandeix la quadrícula",
     "collapseGridTooltipText": "Redueix la quadrícula",
     "zoomToLocationTooltipText": "Aplica el zoom a la ubicació",
-    "onScreenDigitizationTooltipText": "Digitalitza"
+    "onScreenDigitizationTooltipText": "Digitalitza",
+    "updateRotationPointTooltipText": "ó_Update rotation point_______à"
   },
   "traverseSettings": {
     "bearingLabel": "Rumb",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "No es poden desar les línies de parcel·la.",
     "unableToUpdateParcelLines": "No es poden actualitzar les línies de parcel·la.",
     "parcelSavedSuccessMessage": "La parcel·la s'ha desat correctament.",
+    "parcelDeletedSuccessMessage": "ó_Parcel deleted successfully_________à.",
+    "parcelDeleteErrorMessage": "ó_Error in deleteing parcel_________à.",
     "enterValidParcelNameMessage": "Introduïu un nom de parcel·la vàlid.",
     "enterValidPlanNameMessage": "Introduïu un nom de pla vàlid.",
     "enterValidDocumentTypeMessage": "Tipus de document no vàlid.",

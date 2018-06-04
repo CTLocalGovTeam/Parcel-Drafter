@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "线类型",
     "parcelPointSymbolLabel": "宗地点符号",
     "parcelPointSymbolHintText": "提示：用于显示线原点的点符号。",
+    "startOrRotationSymbolLabel": "试_Start and Rotate Point Symbol__________验",
+    "startOrRotationSymbolHintText": "试_Hint: Used to display start and rotate point symbol_________________验.",
     "symbolPickerPreviewText": "预览",
     "selectLineLayerLabel": "选择线图层"
   },

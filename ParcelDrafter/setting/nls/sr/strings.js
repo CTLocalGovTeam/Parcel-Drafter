@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Tip linije",
     "parcelPointSymbolLabel": "Simbol tačke parcele",
     "parcelPointSymbolHintText": "Savet: koristite za prikaz simbola tačke za polaznu tačku linije.",
+    "startOrRotationSymbolLabel": "Č_Start and Rotate Point Symbol__________ž",
+    "startOrRotationSymbolHintText": "Č_Hint: Used to display start and rotate point symbol_________________ž.",
     "symbolPickerPreviewText": "Prikaži",
     "selectLineLayerLabel": "Izaberite sloj linije"
   },

@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Linjetype",
     "parcelPointSymbolLabel": "Parcelpunktsymbol",
     "parcelPointSymbolHintText": "Tip: Bruges til at vise punktsymbol for den oprindelige linje.",
+    "startOrRotationSymbolLabel": "ø_Start and Rotate Point Symbol__________å",
+    "startOrRotationSymbolHintText": "ø_Hint: Used to display start and rotate point symbol_________________å.",
     "symbolPickerPreviewText": "Eksempel",
     "selectLineLayerLabel": "Vælg linjelag"
   },

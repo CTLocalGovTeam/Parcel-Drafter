@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Linjetyp",
     "parcelPointSymbolLabel": "Byggnadspunktsymbol",
     "parcelPointSymbolHintText": "Tips: Används för att visa punktsymbolen för linjens startpunkt.",
+    "startOrRotationSymbolLabel": "Å_Start and Rotate Point Symbol__________ö",
+    "startOrRotationSymbolHintText": "Å_Hint: Used to display start and rotate point symbol_________________ö.",
     "symbolPickerPreviewText": "Förhandsgranska",
     "selectLineLayerLabel": "Välj linjelager"
   },

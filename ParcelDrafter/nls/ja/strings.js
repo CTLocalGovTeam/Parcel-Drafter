@@ -23,6 +23,7 @@ define({
   "mapTooltipForEditNewTraverse": "編集するパーセルを選択してください",
   "mapTooltipForUpdateStartPoint": "クリックして開始点を更新",
   "mapTooltipForScreenDigitization": "クリックしてパーセル ポイントを追加",
+  "mapTooltipForUpdatingRotaionPoint": "須_Click to update rotation point__________鷗",
   "mapTooltipForRotate": "ドラッグして回転",
   "mapTooltipForScale": "ドラッグしてサイズ変更",
   "backButtonTooltip": "戻る",
@@ -46,7 +47,8 @@ define({
     "expandGridTooltipText": "グリッドの展開",
     "collapseGridTooltipText": "グリッドをたたむ",
     "zoomToLocationTooltipText": "位置にズーム",
-    "onScreenDigitizationTooltipText": "デジタイズ"
+    "onScreenDigitizationTooltipText": "デジタイズ",
+    "updateRotationPointTooltipText": "須_Update rotation point_______鷗"
   },
   "traverseSettings": {
     "bearingLabel": "方位",
@@ -91,6 +93,8 @@ define({
     "unableToSaveParcelLines": "パーセル ラインを保存できません。",
     "unableToUpdateParcelLines": "パーセル ラインを更新できません。",
     "parcelSavedSuccessMessage": "パーセルが正常に保存されました。",
+    "parcelDeletedSuccessMessage": "須_Parcel deleted successfully_________鷗.",
+    "parcelDeleteErrorMessage": "須_Error in deleteing parcel_________鷗.",
     "enterValidParcelNameMessage": "有効なパーセル名を入力してください。",
     "enterValidPlanNameMessage": "有効なプラン名を入力してください。",
     "enterValidDocumentTypeMessage": "無効なドキュメント タイプです。",

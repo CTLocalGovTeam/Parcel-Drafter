@@ -37,6 +37,8 @@ define({
     "lineTypeFieldLabel": "Vonaltípus",
     "parcelPointSymbolLabel": "Parcella pontszimbóluma",
     "parcelPointSymbolHintText": "Tipp: A vonal kiindulópontját jelző szimbólum megjelenítésére szolgál.",
+    "startOrRotationSymbolLabel": "í_Start and Rotate Point Symbol__________ő",
+    "startOrRotationSymbolHintText": "í_Hint: Used to display start and rotate point symbol_________________ő.",
     "symbolPickerPreviewText": "Előnézet",
     "selectLineLayerLabel": "Vonalréteg kiválasztása"
   },
