@@ -505,7 +505,7 @@ define([
           }
           this._startPoint = mapPoint;
           //set start point and and also reset roation point
-          this._newTraverseInstance.setStartPoint(this._startPoint, true);
+          this._newTraverseInstance.setStartPoint(this._startPoint, true, true);
         }
       },
 

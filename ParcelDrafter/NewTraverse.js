@@ -1719,11 +1719,19 @@ define([
       * Note: It will always set the start point in 4326 as.
       * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
-      setStartPoint: function (startPoint, resetRotationPoint) {
+      setStartPoint: function (startPoint, resetRotationPoint, updatingStartPoint) {
         var defaultStartPointSpatialRef = new SpatialReference(4326);
         geometryUtils.getProjectedGeometry(startPoint, defaultStartPointSpatialRef,
           this.geometryService).then(
             lang.hitch(this, function (projectedGeometry) {
+              //if updating start point by map click and roation point is changed
+              //in such case move the rotation point to the selected start point and redraw parcel
+              if (updatingStartPoint && this._rotationPointInfo) {
+                this._setRotationPoint(
+                  this._rotationPointInfo.rotationPointIndex, projectedGeometry);
+                this._updateStartPointFromRotationPoint();
+                return;
+              }
               //set new start point
               this.startPoint = projectedGeometry;
               if (resetRotationPoint) {
