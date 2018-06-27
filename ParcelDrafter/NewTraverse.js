@@ -107,6 +107,8 @@ define([
       polylineDeleteArr: [], //To store polyline that needs to be deleted before saving edited one
       _popupDialog: null, //Stores parcel info content
       _popupCoords: null, //Stores tooltip position for pop-up
+      _setExtentTimer: null, //Timer for setExtent metohd when called multiple times
+
       numberFieldTypes: ['esriFieldTypeSmallInteger',
         'esriFieldTypeInteger',
         'esriFieldTypeSingle',
@@ -126,6 +128,7 @@ define([
         this._arrayOfAllBoundaryLines = [];
         this._nodes = [];
         this._itemList = [];
+        this._setExtentTimer = null;
         //add class to main node
         domClass.add(this.domNode, "esriCTNewTraverseGrid");
         //create graphics layer for geometries
@@ -2010,14 +2013,21 @@ define([
       * @memberOf widgets/ParcelDrafter/NewTraverse
       **/
       _setExtentToLayer: function (graphicsLayer, forceZoom) {
-        var newExtent;
-        if (graphicsLayer.graphics.length > 0) {
-          newExtent = graphicsUtils.graphicsExtent(graphicsLayer.graphics);
-          //set the new extent only if it is out of current map extent
-          if (forceZoom || !this.map.extent.contains(newExtent)) {
-            this.map.setExtent(newExtent.expand(1.5));
-          }
+        //applied timer as _setExtentToLayer can be called multilpel times
+        //in such case the execution should happen only once
+        if (this._setExtentTimer) {
+          clearTimeout(this._setExtentTimer);
         }
+        this._setExtentTimer = setTimeout(lang.hitch(this, function () {
+          var newExtent;
+          if (graphicsLayer.graphics.length > 0) {
+            newExtent = graphicsUtils.graphicsExtent(graphicsLayer.graphics);
+            //set the new extent only if it is out of current map extent
+            if (forceZoom || !this.map.extent.contains(newExtent)) {
+              this.map.setExtent(newExtent.expand(1.5));
+            }
+          }
+        }), 200);
       },
 
       /**
